@@ -1,5 +1,18 @@
 #include "TileMap.hpp"
 #include <iostream>
+#include <sstream>
+
+namespace {
+    std::vector<std::string> split(const std::string& str, char delim) {
+        std::vector<std::string> elems;
+        std::stringstream ss(str);
+        std::string item;
+        while (std::getline(ss, item, delim)) {
+            elems.push_back(item);
+        }
+        return elems;
+    }
+}
 
 TileMap::TileMap(const std::string& filename) {
     pugi::xml_document doc;
@@ -16,16 +29,15 @@ TileMap::TileMap(const std::string& filename) {
         pugi::xml_node image_node = map_node.child("tileset").child("image");
 
         const std::string tileset_file = image_node.attribute("source").value();
-        sgl::Surface tileset(tileset_file);
+#if 0
+        const std::string dirname = split(filename, '/')[0];
+        sgl::Surface tileset(dirname + '/' + tileset_file);
         this->_texture.load(tileset);
-
+#endif
         pugi::xml_node data = map_node.child("layer").child("data");
         for (pugi::xml_node_iterator it = data.begin(); it != data.end(); ++it) {
             for (pugi::xml_attribute_iterator ait = it->attributes_begin(); ait != it->attributes_end(); ++ait) {
-                if (ait->name() == "gid") {
-                    int id = ait->as_int();
-                    std::cout << id << std::endl;
-                }
+                std::cout << ait->name() << "::" << ait->value() << std::endl;
             }
         }
     } else {

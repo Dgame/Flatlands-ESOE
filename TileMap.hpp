@@ -9,6 +9,10 @@
 #include <pugixml.hpp>
 #include "Tile.hpp"
 
+namespace {
+    std::vector<std::string> split(const std::string&, char delim);
+}
+
 class TileMap {
 private:
     std::vector<Tile> _tiles;
