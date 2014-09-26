@@ -1,6 +1,7 @@
-#include "TileMap.hpp"
 #include <iostream>
 #include <sstream>
+#include <SGL/Window/Window.hpp>
+#include "TileMap.hpp"
 
 namespace {
     std::vector<std::string> split(const std::string& str, char delim) {
@@ -11,6 +12,12 @@ namespace {
             elems.push_back(item);
         }
         return elems;
+    }
+}
+
+void TileMap::draw(const sgl::Window* wnd) const {
+    for (const std::unique_ptr<Tile>& tile : _tiles) {
+        tile->draw(wnd);
     }
 }
 
@@ -29,15 +36,27 @@ TileMap::TileMap(const std::string& filename) {
         pugi::xml_node image_node = map_node.child("tileset").child("image");
 
         const std::string tileset_file = image_node.attribute("source").value();
-#if 0
+
         const std::string dirname = split(filename, '/')[0];
         sgl::Surface tileset(dirname + '/' + tileset_file);
         this->_texture.load(tileset);
-#endif
+
+        sgl::vec2s pos(0, 0);
+
         pugi::xml_node data = map_node.child("layer").child("data");
         for (pugi::xml_node_iterator it = data.begin(); it != data.end(); ++it) {
+            // Layer
             for (pugi::xml_attribute_iterator ait = it->attributes_begin(); ait != it->attributes_end(); ++ait) {
-                std::cout << ait->name() << "::" << ait->value() << std::endl;
+                sgl::int16 gid = static_cast<sgl::int16>(*ait->value()) - '0';
+                if (gid != 0) {
+                    //std::cout << ait->name() << "::" << ait->value() << "::" << gid << std::endl;
+                    _tiles.push_back(make_tile(gid, _texture, pos));
+                }
+                pos.x++;
+                if (pos.x >= _width) {
+                    pos.x = 0;
+                    pos.y++;
+                }
             }
         }
     } else {
@@ -45,18 +64,10 @@ TileMap::TileMap(const std::string& filename) {
     }
 }
 
-const Tile& TileMap::at(const sgl::vec2s& pos) const {
+const Tile* TileMap::at(const sgl::vec2s& pos) const {
     return this->at(pos.x + (pos.y * this->_height + 1));
 }
 
-const Tile& TileMap::at(sgl::uint32 index) const {
-    return this->_tiles.at(index);
-}
-
-void TileMap::replaceAt(const sgl::vec2s& pos, const Tile& tile) {
-    // TODO:
-}
-
-void TileMap::replaceAt(sgl::uint32 index, const Tile& tile) {
-    // TODO:
+const Tile* TileMap::at(sgl::uint32 index) const {
+    return this->_tiles.at(index).get();
 }
