@@ -61,10 +61,19 @@
 			<Add library="libs\sgl\libs\32\lib\glew32.lib" />
 			<Add directory="libs/sgl/libs/32/lib" />
 		</Linker>
-		<Unit filename="Tile.cpp" />
-		<Unit filename="Tile.hpp" />
+		<Unit filename="Patch.hpp" />
 		<Unit filename="TileMap.cpp" />
 		<Unit filename="TileMap.hpp" />
+		<Unit filename="Tiles/Factory.cpp" />
+		<Unit filename="Tiles/Factory.hpp" />
+		<Unit filename="Tiles/Gras.cpp" />
+		<Unit filename="Tiles/Gras.hpp" />
+		<Unit filename="Tiles/Ground.cpp" />
+		<Unit filename="Tiles/Ground.hpp" />
+		<Unit filename="Tiles/Stream.cpp" />
+		<Unit filename="Tiles/Stream.hpp" />
+		<Unit filename="Tiles/Tile.cpp" />
+		<Unit filename="Tiles/Tile.hpp" />
 		<Unit filename="libs/pugixml/src/pugixml.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
