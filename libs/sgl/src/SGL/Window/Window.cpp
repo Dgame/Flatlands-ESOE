@@ -3,12 +3,19 @@
 #include <SGL/Graphic/Texture.hpp>
 #include <SGL/Graphic/Surface.hpp>
 #include <SGL/Math/Geometry.hpp>
+#include <SGL/Core/Init.hpp>
 
 namespace sgl {
     int32 Window::_count = 0;
 
-    Window::Window(uint16 width, uint16 height, const std::string& title, Style style)
-        : Window(ShortRect(100, 100, width, height), title, style)
+    Window::Window(uint16 width, uint16 height, const std::string& title, Style style) :
+        Window(ShortRect(100, 100, width, height), title, style)
+    {
+
+    }
+
+    Window::Window(const DisplayMode& mode, const std::string& title, Style style) :
+        Window(mode.width, mode.height, title, style)
     {
 
     }
@@ -34,8 +41,8 @@ namespace sgl {
             std::cerr << SDL_GetError() << std::endl;
             exit(1);
         }
-
         SDL_GL_MakeCurrent(_window, _context);
+
         Intern::initGL();
 #if SGL_DEBUG
         const uint8* GL_version = glGetString(GL_VERSION);
@@ -60,6 +67,28 @@ namespace sgl {
         _count--;
 
         Intern::quitSDL(_count);
+    }
+
+    void Window::setDisplayMode(const DisplayMode& mode) {
+        if (this->getStyle() & Style::Fullscreen) {
+            SDL_DisplayMode sdl_mode;
+            Copy(mode, &sdl_mode);
+
+            SDL_Check(SDL_SetWindowDisplayMode(_window, &sdl_mode));
+        } else {
+            this->setSize(mode.width, mode.height);
+        }
+    }
+
+    DisplayMode Window::getDisplayMode() const {
+        SDL_DisplayMode sdl_mode;
+        DisplayMode mode;
+
+        const int result = SDL_Check(SDL_GetWindowDisplayMode(_window, &sdl_mode));
+        if (result == 0)
+            Copy(&sdl_mode, mode);
+
+        return mode;
     }
 
     void Window::loadProjection() const {
@@ -101,10 +130,6 @@ namespace sgl {
             SDL_EnableScreenSaver();
         else
             SDL_DisableScreenSaver();
-    }
-
-    void Window::setIcon(const Surface& icon) const {
-        SDL_SetWindowIcon(_window, icon._surface);
     }
 
     void Window::setSwapInterval(SwapInterval interval) const {

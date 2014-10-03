@@ -1,11 +1,15 @@
 #include <iostream>
 #include <SGL/all.hpp>
-#include "TileMap.hpp"
+#include "Level.hpp"
 
 int main() {
-    sgl::Window wnd(800, 600, "Flatlands");
+    sgl::Window wnd(1024, 768, "Quinn Quadrat - Ein Schrecken ohne Ecken");
 
-    TileMap map("media/map.tmx");
+    sgl::Surface quinn("media/Quinn.png");
+    quinn.setAsIcon();
+
+    Level level;
+    level.load();
 
     sgl::Event event;
     while (wnd.isOpen()) {
@@ -24,7 +28,8 @@ int main() {
             }
         }
 
-        wnd.draw(map);
+        level.draw(&wnd);
+
         wnd.display();
     }
 }
