@@ -18,6 +18,7 @@ void Quinn::move(Direction dir) {
 }
 
 void Quinn::noGround() {
+    // TODO: Drop smoother
     _sprite.move(0, TILE_SIZE);
 
     Entity::noGround();
