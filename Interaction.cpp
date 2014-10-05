@@ -14,7 +14,6 @@ void Interaction::handle(Tile*, TileMap*) {
 
 void Interaction::handle(Entity* entity, TileMap* tm) {
     // TODO: observe if entity is falling and animate falling smooth
-
     sgl::vec2f pos = entity->getPosition();
 
     // Look a half tile to the left and to the right

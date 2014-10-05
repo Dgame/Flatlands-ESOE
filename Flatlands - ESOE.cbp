@@ -82,6 +82,7 @@
 		<Unit filename="Objects/Factory.hpp" />
 		<Unit filename="Objects/FlatLandObject.cpp" />
 		<Unit filename="Objects/FlatLandObject.hpp" />
+		<Unit filename="Objects/ID.hpp" />
 		<Unit filename="Objects/Item.cpp" />
 		<Unit filename="Objects/Item.hpp" />
 		<Unit filename="Objects/Items/Crystall.cpp" />
