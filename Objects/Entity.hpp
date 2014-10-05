@@ -7,6 +7,7 @@
 class Entity : public FlatLandObject {
 protected:
     Direction _dir = Direction::Left;
+    bool _onGround = true;
 
 public:
     explicit Entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
@@ -16,7 +17,17 @@ public:
         return _dir;
     }
 
-    virtual void noGround() { }
+    bool isOnGround() const {
+        return _onGround;
+    }
+
+    bool onGround() {
+        _onGround = true;
+    }
+
+    virtual void noGround() {
+        _onGround = false;
+    }
 
     virtual void interactWith(Entity*) { }
     virtual void interactWith(Item*) { }

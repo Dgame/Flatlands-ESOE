@@ -21,6 +21,10 @@ public:
     void load();
     void loadNext();
 
+    Quinn* getQuinn() {
+        return _map->getQuinn();
+    }
+
     void update();
     void draw(const sgl::Window*) const;
 };

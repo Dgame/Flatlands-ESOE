@@ -6,6 +6,7 @@
 #include "Objects/Stream.hpp"
 
 #include "TileMap.hpp"
+#include "Objects/ID.hpp"
 
 void Interaction::handle(Tile*, TileMap*) {
 
@@ -22,8 +23,10 @@ void Interaction::handle(Entity* entity, TileMap* tm) {
     pos.y += TILE_SIZE;
 
     const Tile* tile = tm->getTileAt(pos);
-    if (!tile)
+    if (!tile || !tile->isGround())
         entity->noGround();
+    else
+        entity->onGround();
 }
 
 void Interaction::handle(Item*, TileMap*) {

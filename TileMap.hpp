@@ -18,6 +18,8 @@
 #include "Interaction.hpp"
 #include "Config.hpp"
 
+class Quinn;
+
 namespace {
     std::vector<std::string> split(const std::string&, char delim);
 
@@ -46,6 +48,8 @@ private:
     std::vector<std::unique_ptr<Stream>> _streams;
     std::vector<std::unique_ptr<Entity>> _entities;
 
+    Quinn* _quinn = nullptr;
+
     sgl::Texture _tileset;
     Interaction _interaction;
 
@@ -65,6 +69,10 @@ public:
     Item* getItemAt(const sgl::vec2f&);
     Entity* getEntityAt(const sgl::vec2f&);
     Stream* getStreamAt(const sgl::vec2f&);
+
+    Quinn* getQuinn() {
+        return _quinn;
+    }
 
     sgl::uint16 width() const {
         return _width;

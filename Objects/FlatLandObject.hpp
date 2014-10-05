@@ -4,7 +4,8 @@
 #include <iostream>
 #include <SGL/Core/Types.hpp>
 #include <SGL/Graphic/Sprite.hpp>
-#include "../Config.hpp"
+
+#include "ID.hpp"
 
 namespace sgl {
     class Window;
@@ -25,8 +26,12 @@ public:
     explicit FlatLandObject(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~FlatLandObject() { }
 
-    sgl::int8 ID() const {
+    sgl::int8 TexID() const {
         return _id;
+    }
+
+    bool isEqual(sgl::int8 id) const {
+        return (_id + 1) == id;
     }
 
     const sgl::vec2f& getPosition() const;

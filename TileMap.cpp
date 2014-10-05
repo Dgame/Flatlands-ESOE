@@ -2,6 +2,7 @@
 #include <SGL/Window/Window.hpp>
 #include <SGL/Graphic/Surface.hpp>
 #include "Objects/Factory.hpp"
+#include "Objects/Entities/Quinn.hpp"
 
 namespace {
     std::vector<std::string> split(const std::string& str, char delim) {
@@ -80,6 +81,9 @@ TileMap::TileMap(const std::string& filename) {
             for (pugi::xml_attribute_iterator ait = it->attributes_begin(); ait != it->attributes_end(); ++ait) {
                 const int gid = toInt(ait->value());
                 _generate(gid, pos);
+
+                if (gid == ID::Quinn)
+                    _quinn = static_cast<Quinn*>(_entities.back().get());
 
                 pos.x++;
                 if (pos.x >= _width) {

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SGL/all.hpp>
 #include "Level.hpp"
+#include "Objects/Entities/Quinn.hpp"
 
 int main() {
     sgl::Window wnd(1024, 768, "Quinn Quadrat - Ein Schrecken ohne Ecken");
@@ -29,6 +30,10 @@ int main() {
                 case sgl::Event::KeyDown:
                     if (event.key.key == sgl::Key::Esc)
                         wnd.close();
+                    else if (event.key.key == sgl::Key::Left)
+                        level.getQuinn()->move(Direction::Left);
+                    else if (event.key.key == sgl::Key::Right)
+                        level.getQuinn()->move(Direction::Right);
                 break;
             }
         }

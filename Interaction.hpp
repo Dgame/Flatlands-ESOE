@@ -2,6 +2,7 @@
 #define FLATLAND_INTERACTION_HPP
 
 #include "Objects/FlatLandObject.hpp"
+
 class TileMap;
 
 struct Interaction {
