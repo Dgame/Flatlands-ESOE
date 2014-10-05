@@ -4,8 +4,6 @@
 #include "FlatLandObject.hpp"
 #include <SGL/Graphic/Texture.hpp>
 
-static sgl::int8 CloudId = 1;
-
 class Cloud : public FlatLandObject {
 private:
     sgl::Texture _texture;

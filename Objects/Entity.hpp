@@ -2,16 +2,24 @@
 #define FLATLAND_ENTITY_HPP
 
 #include "FlatLandObject.hpp"
+#include "Direction.hpp"
 
 class Entity : public FlatLandObject {
+protected:
+    Direction _dir = Direction::Left;
+
 public:
     explicit Entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~Entity() { }
 
-    void move(float cx, float cy);
-    void move(const sgl::vec2f&);
+    Direction getDirection() const {
+        return _dir;
+    }
 
-    virtual void interactWith(Item*) override;
+    virtual void noGround() { }
+
+    virtual void interactWith(Entity*) { }
+    virtual void interactWith(Item*) { }
 };
 
 #endif

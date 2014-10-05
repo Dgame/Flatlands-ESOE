@@ -5,10 +5,7 @@
 #include <memory>
 #include <vector>
 #include "Objects/Cloud.hpp"
-
-namespace {
-    const std::string DEFAULT_BACKGROUND = "media/level_1.png";
-}
+#include "Config.hpp"
 
 class Background {
 private:

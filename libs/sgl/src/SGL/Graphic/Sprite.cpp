@@ -4,8 +4,10 @@
 #include <SGL/Window/Window.hpp>
 
 namespace sgl {
-    Sprite::Sprite(Texture& tex) : _texture(&tex), _clipRect(0, 0, tex.width(), tex.height()) {
+    Sprite::Sprite(Texture& tex) : _texture(&tex) {
+        _adjustClipRect();
         _updateVertices();
+
         this->setColor(Color4b::White);
     }
 
@@ -37,20 +39,24 @@ namespace sgl {
         _vertices[3].texCoord = vec2f(tx_tw, ty_th);
     }
 
+    void Sprite::_adjustClipRect() {
+        _clipRect.x = 0;
+        _clipRect.y = 0;
+        _clipRect.width = _texture->width();
+        _clipRect.height = _texture->height();
+    }
+
     void Sprite::draw(const Window* wnd) const {
         wnd->draw(Geometry::TriangleStrip, this->getMatrix(), *_texture, _vertices, 4);
     }
 
-    void Sprite::setTexture(Texture& tex, bool resetClipRect) {
+    void Sprite::setTexture(Texture& tex) {
         _texture = &tex;
 
-        if (resetClipRect) {
-            _clipRect.x = _clipRect.y = 0;
-            _clipRect.width = tex.width();
-            _clipRect.height = tex.height();
+        this->setColor(Color4b::White);
 
-            _updateVertices();
-        }
+        _adjustClipRect();
+        _updateVertices();
     }
 
     void Sprite::setColor(const Color4b& col) {

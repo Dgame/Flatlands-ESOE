@@ -4,15 +4,16 @@
 #include <iostream>
 #include <SGL/Core/Types.hpp>
 #include <SGL/Graphic/Sprite.hpp>
-
-const sgl::int16 TILE_SIZE = 32;
+#include "../Config.hpp"
 
 namespace sgl {
     class Window;
 }
 
 class Entity;
+class Tile;
 class Item;
+class Stream;
 
 class FlatLandObject {
 protected:
@@ -28,11 +29,16 @@ public:
         return _id;
     }
 
-    void draw(const sgl::Window*) const;
-    virtual void update();
+    const sgl::vec2f& getPosition() const;
 
-    virtual void interactWith(Entity*);
-    virtual void interactWith(Item*);
+    void draw(const sgl::Window*) const;
+
+    virtual void update() { }
+
+    virtual void interactWith(Entity*) { }
+    virtual void interactWith(Tile*) { }
+    virtual void interactWith(Item*) { }
+    virtual void interactWith(Stream*) { }
 };
 
 #endif // FLATLAND_OBJECT_HPP

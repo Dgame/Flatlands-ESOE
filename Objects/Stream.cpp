@@ -14,13 +14,13 @@ void Stream::update() {
     if (_clock.getElapsedMs() > 75) {
         _clock.reset();
 
-        if (!_reverse && _diff > -3) {
+        if (!_reverse) {
             _diff -= 1;
-            if (_diff == -3)
+            if (_diff <= -3)
                 _reverse = true;
         } else if (_reverse) {
             _diff += 1;
-            if (_diff == 3)
+            if (_diff >= 3)
                 _reverse = false;
         }
 

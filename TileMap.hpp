@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <memory>
-
+#include <cmath>
 #include <sstream>
 #include <pugixml.hpp>
 
@@ -14,6 +14,9 @@
 #include "Objects/Stream.hpp"
 #include "Objects/Item.hpp"
 #include "Objects/Entity.hpp"
+
+#include "Interaction.hpp"
+#include "Config.hpp"
 
 namespace {
     std::vector<std::string> split(const std::string&, char delim);
@@ -27,6 +30,13 @@ namespace {
 
         return num;
     }
+
+    inline sgl::vec2s PixelToPos(const sgl::vec2f& pos) {
+        const sgl::int16 x = static_cast<sgl::int16>(std::round(pos.x / TILE_SIZE));
+        const sgl::int16 y = static_cast<sgl::int16>(std::round(pos.y / TILE_SIZE));
+
+        return sgl::vec2s(x, y);
+    }
 }
 
 class TileMap {
@@ -37,6 +47,7 @@ private:
     std::vector<std::unique_ptr<Entity>> _entities;
 
     sgl::Texture _tileset;
+    Interaction _interaction;
 
     sgl::uint16 _width;
     sgl::uint16 _height;
@@ -50,8 +61,10 @@ public:
     void update();
     void draw(const sgl::Window*) const;
 
-    const Tile* at(const sgl::vec2s&) const;
-    const Tile* at(sgl::uint32 index) const;
+    Tile* getTileAt(const sgl::vec2f&);
+    Item* getItemAt(const sgl::vec2f&);
+    Entity* getEntityAt(const sgl::vec2f&);
+    Stream* getStreamAt(const sgl::vec2f&);
 
     sgl::uint16 width() const {
         return _width;

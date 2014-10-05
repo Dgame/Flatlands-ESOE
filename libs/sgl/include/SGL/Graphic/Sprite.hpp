@@ -18,18 +18,16 @@ namespace sgl {
 
         virtual void draw(const Window*) const override;
         void _updateVertices();
+        void _adjustClipRect();
 
     public:
+        Sprite() = default;
         explicit Sprite(Texture&);
         virtual ~Sprite() { }
 
-        void setTexture(Texture&, bool resetClipRect = true);
+        void setTexture(Texture&);
 
         const Texture* getTexture() const {
-            return _texture;
-        }
-
-        Texture* getTexture() {
             return _texture;
         }
 
@@ -37,10 +35,6 @@ namespace sgl {
         void setClipRect(const ShortRect&);
 
         const ShortRect& getClipRect() const {
-            return _clipRect;
-        }
-
-        ShortRect& getClipRect() {
             return _clipRect;
         }
 

@@ -3,6 +3,10 @@
 #include <sstream>
 #include <SGL/Graphic/Surface.hpp>
 
+namespace {
+    sgl::uint16 CloudID = 1;
+}
+
 Cloud::Cloud(int which) : FlatLandObject(_texture) {
     _spawn();
 
@@ -22,7 +26,7 @@ Cloud::Cloud(int which) : FlatLandObject(_texture) {
         _sprite.setTexture(_texture);
     }
 
-    CloudId++;
+    CloudID += 1;
 }
 
 void Cloud::_spawn() {
@@ -32,14 +36,14 @@ void Cloud::_spawn() {
     std::uniform_real_distribution<float> dist_y(5000, 20000);
 
     float x, y;
-    for (int n = 0; n < 100; ++n) {
+    for (sgl::uint16 n = 0; n < 100; ++n) {
         x = dist_x(mt);
         y = dist_y(mt);
 
-        std::cout << x << ", " << y << std::endl;
+//        std::cout << x << ", " << y << std::endl;
 
-        if (n == CloudId) {
-            std::cout << "----" << std::endl;
+        if (n == CloudID) {
+//            std::cout << "----" << std::endl;
             break;
         }
     }

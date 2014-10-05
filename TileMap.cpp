@@ -7,6 +7,7 @@ namespace {
     std::vector<std::string> split(const std::string& str, char delim) {
         std::vector<std::string> elems;
         std::stringstream ss(str);
+
         std::string item;
         while (std::getline(ss, item, delim)) {
             elems.push_back(item);
@@ -93,19 +94,27 @@ TileMap::TileMap(const std::string& filename) {
 }
 
 void TileMap::update() {
-    for (const std::unique_ptr<Tile>& tile : _tiles) {
+    for (std::unique_ptr<Tile>& tile : _tiles) {
+        _interaction.handle(tile.get(), this);
+
         tile->update();
     }
 
-    for (const std::unique_ptr<Entity>& entity : _entities) {
+    for (std::unique_ptr<Entity>& entity : _entities) {
+        _interaction.handle(entity.get(), this);
+
         entity->update();
     }
 
-    for (const std::unique_ptr<Item>& item : _items) {
+    for (std::unique_ptr<Item>& item : _items) {
+        _interaction.handle(item.get(), this);
+
         item->update();
     }
 
-    for (const std::unique_ptr<Stream>& stream : _streams) {
+    for (std::unique_ptr<Stream>& stream : _streams) {
+        _interaction.handle(stream.get(), this);
+
         stream->update();
     }
 }
@@ -115,12 +124,12 @@ void TileMap::draw(const sgl::Window* wnd) const {
         tile->draw(wnd);
     }
 
-    for (const std::unique_ptr<Entity>& entity : _entities) {
-        entity->draw(wnd);
-    }
-
     for (const std::unique_ptr<Item>& item : _items) {
         item->draw(wnd);
+    }
+
+    for (const std::unique_ptr<Entity>& entity : _entities) {
+        entity->draw(wnd);
     }
 
     for (const std::unique_ptr<Stream>& stream : _streams) {
@@ -128,10 +137,31 @@ void TileMap::draw(const sgl::Window* wnd) const {
     }
 }
 
-const Tile* TileMap::at(const sgl::vec2s& pos) const {
-    return this->at(pos.x + (pos.y * this->_height + 1));
+Tile* TileMap::getTileAt(const sgl::vec2f& pos) {
+    const sgl::vec2s global_pos = PixelToPos(pos);
+
+    for (std::unique_ptr<Tile>& tile : _tiles) {
+        const sgl::vec2s global_tile_pos = PixelToPos(tile->getPosition());
+
+        if (global_pos == global_tile_pos) {
+//            std::cout << "Matchting tile!" << std::endl;
+            return tile.get();
+        }
+    }
+
+//    std::cout << "No tile..." << std::endl;
+
+    return nullptr;
 }
 
-const Tile* TileMap::at(sgl::uint32 index) const {
-    return this->_tiles.at(index).get();
+Item* TileMap::getItemAt(const sgl::vec2f&) {
+    return nullptr;
+}
+
+Entity* TileMap::getEntityAt(const sgl::vec2f&) {
+    return nullptr;
+}
+
+Stream* TileMap::getStreamAt(const sgl::vec2f&) {
+    return nullptr;
 }

@@ -3,7 +3,7 @@
 #include <SGL/Graphic/Surface.hpp>
 #include <SGL/Window/Window.hpp>
 
-Background::Background(sgl::uint16 level) : _background(_bg) {
+Background::Background(sgl::uint16 level) {
     std::stringstream buf;
     buf << "media/level_";
     buf << level;

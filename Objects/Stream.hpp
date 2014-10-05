@@ -2,19 +2,14 @@
 #define FLATLAND_STREAM_HPP
 
 #include "FlatLandObject.hpp"
+#include "Direction.hpp"
 #include <SGL/System/StopWatch.hpp>
-
-enum class Direction : char {
-    Up,
-    Down,
-    Left,
-    Right,
-};
 
 class Stream : public FlatLandObject {
 private:
     Direction _dir;
     sgl::StopWatch _clock;
+
     sgl::int8 _diff = 0;
     bool _reverse = false;
 
