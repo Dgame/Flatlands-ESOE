@@ -3,10 +3,12 @@
 
 #include "FlatLandObject.hpp"
 #include <SGL/Graphic/Texture.hpp>
+#include <SGL/System/StopWatch.hpp>
 
 class Cloud : public FlatLandObject {
 private:
     sgl::Texture _texture;
+    sgl::StopWatch _clock;
 
     void _spawn();
     void _respawn();

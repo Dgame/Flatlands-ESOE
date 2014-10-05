@@ -41,7 +41,6 @@ void Cloud::_spawn() {
         y = dist_y(mt);
 
 //        std::cout << x << ", " << y << std::endl;
-
         if (n == CloudID) {
 //            std::cout << "----" << std::endl;
             break;
@@ -66,17 +65,21 @@ void Cloud::_respawn() {
 }
 
 void Cloud::update() {
-    std::random_device rd;
-    std::mt19937 mt(rd());
-    std::uniform_real_distribution<float> dist_x(0.1, 0.8);
-    std::uniform_real_distribution<float> dist_y(-0.1, 0.1);
+    if (_clock.getElapsedMs() > 25) {
+        _clock.reset();
 
-    _sprite.move(dist_x(mt), -dist_y(mt));
+        std::random_device rd;
+        std::mt19937 mt(rd());
+        std::uniform_real_distribution<float> dist_x(0.1, 0.8);
+        std::uniform_real_distribution<float> dist_y(-0.1, 0.1);
 
-    const sgl::vec2f pos = _sprite.getPosition();
-    if (pos.x > 1024 ||
-        pos.y <= -_texture.height() || pos.y >= 768)
-    {
-        _respawn();
+        _sprite.move(dist_x(mt), -dist_y(mt));
+
+        const sgl::vec2f& pos = _sprite.getPosition();
+        if (pos.x > 1024 ||
+            pos.y <= -_texture.height() || pos.y >= 768)
+        {
+            _respawn();
+        }
     }
 }

@@ -5,6 +5,7 @@
 		<Option title="Flatlands - ESOE" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Objects\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Flatlands - ESOE" prefix_auto="1" extension_auto="1" />
@@ -61,19 +62,41 @@
 			<Add library="libs\sgl\libs\32\lib\glew32.lib" />
 			<Add directory="libs/sgl/libs/32/lib" />
 		</Linker>
+		<Unit filename="Background.cpp" />
+		<Unit filename="Background.hpp" />
+		<Unit filename="Config.hpp" />
+		<Unit filename="Interaction.cpp" />
+		<Unit filename="Interaction.hpp" />
+		<Unit filename="Level.cpp" />
+		<Unit filename="Level.hpp" />
+		<Unit filename="Objects/Cloud.cpp" />
+		<Unit filename="Objects/Cloud.hpp" />
+		<Unit filename="Objects/Direction.hpp" />
+		<Unit filename="Objects/Entities/Bug.cpp" />
+		<Unit filename="Objects/Entities/Bug.hpp" />
+		<Unit filename="Objects/Entities/Quinn.cpp" />
+		<Unit filename="Objects/Entities/Quinn.hpp" />
+		<Unit filename="Objects/Entity.cpp" />
+		<Unit filename="Objects/Entity.hpp" />
+		<Unit filename="Objects/Factory.cpp" />
+		<Unit filename="Objects/Factory.hpp" />
+		<Unit filename="Objects/FlatLandObject.cpp" />
+		<Unit filename="Objects/FlatLandObject.hpp" />
+		<Unit filename="Objects/Item.cpp" />
+		<Unit filename="Objects/Item.hpp" />
+		<Unit filename="Objects/Items/Crystall.cpp" />
+		<Unit filename="Objects/Items/Crystall.hpp" />
+		<Unit filename="Objects/Stream.cpp" />
+		<Unit filename="Objects/Stream.hpp" />
+		<Unit filename="Objects/Tile.cpp" />
+		<Unit filename="Objects/Tile.hpp" />
+		<Unit filename="Objects/Tiles/Gras.cpp" />
+		<Unit filename="Objects/Tiles/Gras.hpp" />
+		<Unit filename="Objects/Tiles/Ground.cpp" />
+		<Unit filename="Objects/Tiles/Ground.hpp" />
 		<Unit filename="Patch.hpp" />
 		<Unit filename="TileMap.cpp" />
 		<Unit filename="TileMap.hpp" />
-		<Unit filename="Tiles/Factory.cpp" />
-		<Unit filename="Tiles/Factory.hpp" />
-		<Unit filename="Tiles/Gras.cpp" />
-		<Unit filename="Tiles/Gras.hpp" />
-		<Unit filename="Tiles/Ground.cpp" />
-		<Unit filename="Tiles/Ground.hpp" />
-		<Unit filename="Tiles/Stream.cpp" />
-		<Unit filename="Tiles/Stream.hpp" />
-		<Unit filename="Tiles/Tile.cpp" />
-		<Unit filename="Tiles/Tile.hpp" />
 		<Unit filename="libs/pugixml/src/pugixml.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
