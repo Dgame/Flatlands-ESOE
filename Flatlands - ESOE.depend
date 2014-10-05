@@ -25,7 +25,7 @@
 
 1411394745 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugiconfig.hpp
 
-1412371808 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
+1412511912 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
 	<iostream>
 	<SGL/all.hpp>
 	"Level.hpp"
@@ -40,7 +40,7 @@
 1412281825 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\types.hpp
 	<cstdint>
 
-1411559889 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\sprite.hpp
+1412374514 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\sprite.hpp
 	<SGL/Graphic/Drawable.hpp>
 	<SGL/Graphic/Transformable.hpp>
 	<SGL/Math/vec2.hpp>
@@ -762,13 +762,13 @@
 1412260880 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\color.hpp
 	<SGL/Core/Types.hpp>
 
-1412369744 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
+1412510908 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
 	"TileMap.hpp"
 	<SGL/Window/Window.hpp>
 	<SGL/Graphic/Surface.hpp>
 	"Objects/Factory.hpp"
 
-1412370817 c:\users\besitzer\documents\github\flatlands---esoe\tilemap.hpp
+1412510845 c:\users\besitzer\documents\github\flatlands---esoe\tilemap.hpp
 	<string>
 	<vector>
 	<memory>
@@ -853,7 +853,7 @@
 	<SGL/Core/SDL.hpp>
 	<SGL/Core/Types.hpp>
 
-1412260569 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\stopwatch.hpp
+1412372833 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\stopwatch.hpp
 	<SGL/Core/Types.hpp>
 
 1412278769 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\font.hpp
@@ -998,10 +998,10 @@
 	"../libs/64/SDL2/SDL_mixer.h"
 	"../libs/32/SDL2/SDL_mixer.h"
 
-1412353734 c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.hpp
+1412425488 c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.hpp
 	"FlatLandObject.hpp"
 
-1412363819 c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.hpp
+1412511755 c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.hpp
 	<iostream>
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Sprite.hpp>
@@ -1012,23 +1012,24 @@
 1412352498 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
 	"../Entity.hpp"
 
-1412353872 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
+1412425445 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
 	"FlatLandObject.hpp"
 
 1412354072 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
 	"Entity.hpp"
 
-1412365289 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.cpp
+1412511751 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.cpp
 	"FlatLandObject.hpp"
 	"Entity.hpp"
 	"Item.hpp"
 	<SGL/Window/Window.hpp>
 
-1412353751 c:\users\besitzer\documents\github\flatlands---esoe\objects\item.hpp
+1412425474 c:\users\besitzer\documents\github\flatlands---esoe\objects\item.hpp
 	"FlatLandObject.hpp"
 
-1412351797 c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.hpp
+1412510713 c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.hpp
 	"FlatLandObject.hpp"
+	<SGL/System/StopWatch.hpp>
 
 1412353748 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\item.cpp
 	"Item.hpp"
@@ -1039,34 +1040,35 @@
 1412363457 c:\users\besitzer\documents\github\flatlands---esoe\objects\items\crystall.hpp
 	"../Item.hpp"
 
-1412352769 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.cpp
+1412510726 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.cpp
 	"Stream.hpp"
 	"Entity.hpp"
+	<SGL/Window/Window.hpp>
 
 1412353771 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.cpp
 	"Tile.hpp"
 	"Entity.hpp"
 
-1412351985 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.cpp
+1412510668 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.cpp
 	"Gras.hpp"
 	<SGL/Window/Window.hpp>
 
-1412354844 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.hpp
+1412510652 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.hpp
 	"../Tile.hpp"
 
 1412284187 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.cpp
 	"Ground.hpp"
 	<SGL/Window/Window.hpp>
 
-1412354829 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.hpp
+1412425437 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.hpp
 	"../Tile.hpp"
 
-1412367489 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
+1412429760 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Texture.hpp>
 	<SGL/Math/vec2.hpp>
 
-1412369445 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.cpp
+1412429896 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.cpp
 	"Factory.hpp"
 	"Tiles/Gras.hpp"
 	"Tiles/Ground.hpp"
@@ -1075,18 +1077,16 @@
 	"Entities/Bug.hpp"
 	"Stream.hpp"
 
-1412371782 source:c:\users\besitzer\documents\github\flatlands---esoe\level.cpp
+1412511609 source:c:\users\besitzer\documents\github\flatlands---esoe\level.cpp
 	"Level.hpp"
 	<sstream>
 	<SGL/Window/Window.hpp>
 
-1412371832 c:\users\besitzer\documents\github\flatlands---esoe\level.hpp
+1412511571 c:\users\besitzer\documents\github\flatlands---esoe\level.hpp
 	<string>
 	<memory>
-	<SGL/Core/Types.hpp>
-	<SGL/Graphic/Surface.hpp>
-	<SGL/Graphic/Texture.hpp>
 	"TileMap.hpp"
+	"Background.hpp"
 
 1412369391 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.cpp
 	"Quinn.hpp"
@@ -1099,4 +1099,26 @@
 1412348376 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\rect.inl
 
 1412347608 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec3.inl
+
+1412511495 c:\users\besitzer\documents\github\flatlands---esoe\background.hpp
+	<string>
+	<memory>
+	<vector>
+	"Objects/Cloud.hpp"
+
+1412514078 c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.hpp
+	"FlatLandObject.hpp"
+	<SGL/Graphic/Texture.hpp>
+
+1412514298 source:c:\users\besitzer\documents\github\flatlands---esoe\background.cpp
+	"Background.hpp"
+	<sstream>
+	<SGL/Graphic/Surface.hpp>
+	<SGL/Window/Window.hpp>
+
+1412514103 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.cpp
+	"Cloud.hpp"
+	<random>
+	<sstream>
+	<SGL/Graphic/Surface.hpp>
 

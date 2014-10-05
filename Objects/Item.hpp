@@ -1,5 +1,5 @@
-#ifndef ITEM_HPP
-#define ITEM_HPP
+#ifndef FLATLAND_ITEM_HPP
+#define FLATLAND_ITEM_HPP
 
 #include "FlatLandObject.hpp"
 
@@ -9,4 +9,4 @@ public:
     virtual ~Item() { }
 };
 
-#endif // ITEM_HPP
+#endif // FLATLAND_ITEM_HPP

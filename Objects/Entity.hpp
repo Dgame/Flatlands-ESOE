@@ -1,5 +1,5 @@
-#ifndef ENTITY_HPP
-#define ENTITY_HPP
+#ifndef FLATLAND_ENTITY_HPP
+#define FLATLAND_ENTITY_HPP
 
 #include "FlatLandObject.hpp"
 

@@ -41,13 +41,16 @@ namespace sgl {
         wnd->draw(Geometry::TriangleStrip, this->getMatrix(), *_texture, _vertices, 4);
     }
 
-    void Sprite::setTexture(Texture& tex) {
+    void Sprite::setTexture(Texture& tex, bool resetClipRect) {
         _texture = &tex;
-        _clipRect.x = _clipRect.y = 0;
-        _clipRect.width = tex.width();
-        _clipRect.height = tex.height();
 
-        _updateVertices();
+        if (resetClipRect) {
+            _clipRect.x = _clipRect.y = 0;
+            _clipRect.width = tex.width();
+            _clipRect.height = tex.height();
+
+            _updateVertices();
+        }
     }
 
     void Sprite::setColor(const Color4b& col) {

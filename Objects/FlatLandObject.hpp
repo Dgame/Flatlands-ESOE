@@ -15,11 +15,12 @@ class Entity;
 class Item;
 
 class FlatLandObject {
-private:
+protected:
     sgl::int8 _id;
     sgl::Sprite _sprite;
 
 public:
+    explicit FlatLandObject(sgl::Texture&);
     explicit FlatLandObject(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~FlatLandObject() { }
 
@@ -27,7 +28,8 @@ public:
         return _id;
     }
 
-    virtual void draw(const sgl::Window*) const;
+    void draw(const sgl::Window*) const;
+    virtual void update();
 
     virtual void interactWith(Entity*);
     virtual void interactWith(Item*);

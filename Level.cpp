@@ -3,24 +3,17 @@
 #include <SGL/Window/Window.hpp>
 
 void Level::load() {
-    std::stringstream buf;
-    buf << "media/level_";
-    buf << _levelNr;
-    buf << ".tmx";
+    if (_lastLevel != _levelNr) {
+        std::stringstream buf;
+        buf << "media/level_";
+        buf << _levelNr;
+        buf << ".tmx";
 
-    std::string filename = buf.str();
+        _map = std::unique_ptr<TileMap>(new TileMap(buf.str()));
+        _bg = std::unique_ptr<Background>(new Background(_levelNr));
 
-    _map = std::unique_ptr<TileMap>(new TileMap(filename));
-
-    filename.replace(filename.find(".tmx"), 4, ".png");
-
-    sgl::Surface bg(filename);
-    _bg.load(bg);
-
-    if (!bg)
-        bg.loadFromFile(DEFAULT_BACKGROUND);
-    if (!_background)
-        _background = std::unique_ptr<sgl::Sprite>(new sgl::Sprite(_bg));
+        _lastLevel = _levelNr;
+    }
 }
 
 void Level::loadNext() {
@@ -28,7 +21,12 @@ void Level::loadNext() {
     this->load();
 }
 
+void Level::update() {
+    _bg->update();
+    _map->update();
+}
+
 void Level::draw(const sgl::Window* wnd) const {
-    wnd->draw(*_background);
+    _bg->draw(wnd);
     _map->draw(wnd);
 }

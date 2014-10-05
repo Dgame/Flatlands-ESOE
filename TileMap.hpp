@@ -1,5 +1,5 @@
-#ifndef TILE_MAP_HPP
-#define TILE_MAP_HPP
+#ifndef FLATLAND_TILE_MAP_HPP
+#define FLATLAND_TILE_MAP_HPP
 
 #include <string>
 #include <vector>
@@ -47,18 +47,19 @@ private:
 public:
     explicit TileMap(const std::string&);
 
+    void update();
     void draw(const sgl::Window*) const;
 
     const Tile* at(const sgl::vec2s&) const;
     const Tile* at(sgl::uint32 index) const;
 
     sgl::uint16 width() const {
-        return this->_width;
+        return _width;
     }
 
     sgl::uint16 height() const {
-        return this->_height;
+        return _height;
     }
 };
 
-#endif // TILE_MAP_HPP
+#endif // FLATLAND_TILE_MAP_HPP

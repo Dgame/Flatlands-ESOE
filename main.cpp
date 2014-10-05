@@ -28,6 +28,7 @@ int main() {
             }
         }
 
+        level.update();
         level.draw(&wnd);
 
         wnd.display();

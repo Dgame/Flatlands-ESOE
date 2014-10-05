@@ -1,5 +1,5 @@
-#ifndef TILE_GROUND_HPP
-#define TILE_GROUND_HPP
+#ifndef FLATLAND_TILE_GROUND_HPP
+#define FLATLAND_TILE_GROUND_HPP
 
 #include "../Tile.hpp"
 
@@ -9,4 +9,4 @@ public:
     virtual ~Ground() { }
 };
 
-#endif // TILE_GROUND_HPP
+#endif // FLATLAND_TILE_GROUND_HPP

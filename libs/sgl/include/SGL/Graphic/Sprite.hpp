@@ -23,9 +23,13 @@ namespace sgl {
         explicit Sprite(Texture&);
         virtual ~Sprite() { }
 
-        void setTexture(Texture&);
+        void setTexture(Texture&, bool resetClipRect = true);
 
         const Texture* getTexture() const {
+            return _texture;
+        }
+
+        Texture* getTexture() {
             return _texture;
         }
 
@@ -33,6 +37,10 @@ namespace sgl {
         void setClipRect(const ShortRect&);
 
         const ShortRect& getClipRect() const {
+            return _clipRect;
+        }
+
+        ShortRect& getClipRect() {
             return _clipRect;
         }
 

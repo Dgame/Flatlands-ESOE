@@ -1,5 +1,5 @@
-#ifndef FACTORY_HPP
-#define FACTORY_HPP
+#ifndef FLATLAND_FACTORY_HPP
+#define FLATLAND_FACTORY_HPP
 
 #include <SGL/Core/Types.hpp>
 #include <SGL/Graphic/Texture.hpp>
@@ -10,27 +10,25 @@ class Stream;
 class Item;
 class Entity;
 
-namespace Type {
+namespace ID {
     enum {
         EdgeGroundLeft = 1,
         Ground = 2,
         EdgeGroundRight = 3,
 
-        EdgeGrasLeft = 4,
-        Gras = 5,
-        EdgeGrasRight = 6,
+        Gras = 4,
 
-        StreamRight = 7,
-        StreamLeft = 8,
-        StreamUp = 9,
-        StreamDown = 10,
+        StreamRight = 5,
+        StreamLeft = 6,
+        StreamUp = 7,
+        StreamDown = 8,
 
-        Crystall_1 = 11,
-        Crystall_2 = 12,
-        Crystall_3 = 13,
+        Crystall_1 = 9,
+        Crystall_2 = 10,
+        Crystall_3 = 11,
 
-        Quinn = 14,
-        Bug = 15
+        Quinn = 12,
+        Bug = 13
     };
 }
 
@@ -49,4 +47,4 @@ Item* make_item(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
 Stream* make_stream(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
 Entity* make_entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
 
-#endif // FACTORY_HPP
+#endif // FLATLAND_FACTORY_HPP

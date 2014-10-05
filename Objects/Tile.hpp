@@ -1,5 +1,5 @@
-#ifndef TILE_HPP
-#define TILE_HPP
+#ifndef FLATLAND_TILE_HPP
+#define FLATLAND_TILE_HPP
 
 #include "FlatLandObject.hpp"
 
@@ -11,4 +11,4 @@ public:
     virtual void interactWith(Entity*) override;
 };
 
-#endif // TILE_HPP
+#endif // FLATLAND_TILE_HPP

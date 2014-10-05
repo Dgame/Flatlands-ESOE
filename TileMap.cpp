@@ -15,24 +15,6 @@ namespace {
     }
 }
 
-void TileMap::draw(const sgl::Window* wnd) const {
-    for (const std::unique_ptr<Tile>& tile : _tiles) {
-        tile->draw(wnd);
-    }
-
-    for (const std::unique_ptr<Entity>& entity : _entities) {
-        entity->draw(wnd);
-    }
-
-    for (const std::unique_ptr<Item>& item : _items) {
-        item->draw(wnd);
-    }
-
-    for (const std::unique_ptr<Stream>& stream : _streams) {
-        stream->draw(wnd);
-    }
-}
-
 void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
     const Cat cat = identifyID(id);
     switch (cat) {
@@ -47,7 +29,7 @@ void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
             Item* item = make_item(id, _tileset, pos);
             _items.push_back(std::unique_ptr<Item>(item));
 
-            Tile* tile = make_tile(Type::Gras, _tileset, pos);
+            Tile* tile = make_tile(ID::Gras, _tileset, pos);
             _tiles.push_back(std::unique_ptr<Tile>(tile));
         }
         break;
@@ -62,7 +44,7 @@ void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
             Entity* entity = make_entity(id, _tileset, pos);
             _entities.push_back(std::unique_ptr<Entity>(entity));
 
-            Tile* tile = make_tile(Type::Gras, _tileset, pos);
+            Tile* tile = make_tile(ID::Gras, _tileset, pos);
             _tiles.push_back(std::unique_ptr<Tile>(tile));
         }
         break;
@@ -107,6 +89,42 @@ TileMap::TileMap(const std::string& filename) {
         }
     } else {
         std::cerr << "Could not load map " << filename << std::endl;
+    }
+}
+
+void TileMap::update() {
+    for (const std::unique_ptr<Tile>& tile : _tiles) {
+        tile->update();
+    }
+
+    for (const std::unique_ptr<Entity>& entity : _entities) {
+        entity->update();
+    }
+
+    for (const std::unique_ptr<Item>& item : _items) {
+        item->update();
+    }
+
+    for (const std::unique_ptr<Stream>& stream : _streams) {
+        stream->update();
+    }
+}
+
+void TileMap::draw(const sgl::Window* wnd) const {
+    for (const std::unique_ptr<Tile>& tile : _tiles) {
+        tile->draw(wnd);
+    }
+
+    for (const std::unique_ptr<Entity>& entity : _entities) {
+        entity->draw(wnd);
+    }
+
+    for (const std::unique_ptr<Item>& item : _items) {
+        item->draw(wnd);
+    }
+
+    for (const std::unique_ptr<Stream>& stream : _streams) {
+        stream->draw(wnd);
     }
 }
 
