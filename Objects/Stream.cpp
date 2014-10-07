@@ -6,10 +6,6 @@ Stream::Stream(Direction dir, sgl::int8 id, sgl::Texture& texture, const sgl::ve
 
 }
 
-void Stream::interactWith(Entity*) {
-
-}
-
 void Stream::update() {
     if (_clock.getElapsedMs() > 75) {
         _clock.reset();

@@ -3,12 +3,10 @@
 
 #include "../Entity.hpp"
 #include <SGL/Graphic/Texture.hpp>
-#include <SGL/System/StopWatch.hpp>
+
 
 class Bug : public Entity {
 private:
-    sgl::StopWatch _clock;
-
     sgl::Texture _left_texture;
     sgl::Texture _right_texture;
 
@@ -16,7 +14,6 @@ public:
     explicit Bug(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~Bug() { }
 
-    virtual void noGround() override;
     virtual void update() override;
 };
 

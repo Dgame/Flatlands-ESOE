@@ -99,26 +99,20 @@ TileMap::TileMap(const std::string& filename) {
 
 void TileMap::update() {
     for (std::unique_ptr<Tile>& tile : _tiles) {
-        _interaction.handle(tile.get(), this);
-
         tile->update();
     }
 
     for (std::unique_ptr<Entity>& entity : _entities) {
-        _interaction.handle(entity.get(), this);
+        _interaction.treat(entity.get(), this);
 
         entity->update();
     }
 
     for (std::unique_ptr<Item>& item : _items) {
-        _interaction.handle(item.get(), this);
-
         item->update();
     }
 
     for (std::unique_ptr<Stream>& stream : _streams) {
-        _interaction.handle(stream.get(), this);
-
         stream->update();
     }
 }
@@ -143,17 +137,11 @@ void TileMap::draw(const sgl::Window* wnd) const {
 
 Tile* TileMap::getTileAt(const sgl::vec2f& pos) {
     const sgl::vec2s global_pos = PixelToPos(pos);
-
     for (std::unique_ptr<Tile>& tile : _tiles) {
         const sgl::vec2s global_tile_pos = PixelToPos(tile->getPosition());
-
-        if (global_pos == global_tile_pos) {
-//            std::cout << "Matchting tile!" << std::endl;
+        if (global_pos == global_tile_pos)
             return tile.get();
-        }
     }
-
-//    std::cout << "No tile..." << std::endl;
 
     return nullptr;
 }

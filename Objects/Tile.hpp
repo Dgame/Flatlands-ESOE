@@ -2,6 +2,7 @@
 #define FLATLAND_TILE_HPP
 
 #include "FlatLandObject.hpp"
+#include "ID.hpp"
 
 class Tile : public FlatLandObject {
 public:

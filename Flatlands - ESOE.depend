@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1411394745 source:c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugixml.cpp
+1409855681 source:c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugixml.cpp
 	"pugixml.hpp"
 	<stdlib.h>
 	<stdio.h>
@@ -15,7 +15,7 @@
 	<new>
 	<stdint.h>
 
-1411394745 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugixml.hpp
+1409855681 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugixml.hpp
 	"pugiconfig.hpp"
 	<stddef.h>
 	<exception>
@@ -23,9 +23,9 @@
 	<iosfwd>
 	<string>
 
-1411394745 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugiconfig.hpp
+1409855681 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugiconfig.hpp
 
-1412550991 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
 	<iostream>
 	<SGL/all.hpp>
 	"Level.hpp"
@@ -38,40 +38,40 @@
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Sprite.hpp>
 
-1412281825 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\types.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\types.hpp
 	<cstdint>
 
-1412528645 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\sprite.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\sprite.hpp
 	<SGL/Graphic/Drawable.hpp>
 	<SGL/Graphic/Transformable.hpp>
 	<SGL/Math/vec2.hpp>
 	<SGL/Math/Vertex.hpp>
 	<SGL/Math/Rect.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\drawable.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\drawable.hpp
 
-1412279958 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\transformable.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\transformable.hpp
 	<SGL/Math/mat4.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\mat4.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\mat4.hpp
 	<algorithm>
 	<SGL/Math/vec2.hpp>
 	<SGL/Math/vec3.hpp>
 	<SGL/Math/Rect.hpp>
 
-1412529149 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec2.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec2.hpp
 	<algorithm>
 	<SGL/Core/Types.hpp>
 	<SGL/Math/vec2.inl>
 
-1412262317 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl.hpp
 	<SGL/Core/Config.hpp>
 	"../libs/64/SDL2/SDL.h"
 	"../libs/32/SDL2/SDL.h"
 
-1411747945 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\config.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\config.hpp
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -102,12 +102,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_main.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_stdinc.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -135,33 +135,33 @@
 	<stdlib.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_config.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_platform.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\begin_code.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\begin_code.h
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\close_code.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\close_code.h
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_assert.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_atomic.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_audio.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -171,24 +171,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_error.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_endian.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mutex.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_thread.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -197,18 +197,18 @@
 	<process.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_rwops.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_clipboard.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_cpuinfo.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -220,7 +220,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_events.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -234,7 +234,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_video.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -242,12 +242,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_pixels.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_rect.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -255,7 +255,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_surface.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -264,11 +264,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_blendmode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_keyboard.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -276,27 +276,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_keycode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_scancode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mouse.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_joystick.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_gamecontroller.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -304,11 +304,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_quit.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_gesture.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -316,60 +316,60 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_touch.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_filesystem.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_haptic.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_hints.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_loadso.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_log.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_messagebox.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_power.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_render.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_system.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -377,24 +377,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_timer.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_version.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_image.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mixer.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -403,12 +403,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_ttf.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -439,12 +439,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_main.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_stdinc.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -472,33 +472,33 @@
 	<stdlib.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_config.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_platform.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\begin_code.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\begin_code.h
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\close_code.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\close_code.h
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_assert.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_atomic.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_audio.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -508,24 +508,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_error.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_endian.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mutex.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_thread.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -534,18 +534,18 @@
 	<process.h>
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_rwops.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_clipboard.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_cpuinfo.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -557,7 +557,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_events.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -571,7 +571,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_video.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -579,12 +579,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_pixels.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_rect.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -592,7 +592,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_surface.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -601,11 +601,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_blendmode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_keyboard.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -613,27 +613,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_keycode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_scancode.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mouse.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_joystick.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_gamecontroller.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -641,11 +641,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_quit.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_gesture.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -653,60 +653,60 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_touch.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_filesystem.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_haptic.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_hints.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_loadso.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_log.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_messagebox.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_power.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_render.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_system.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -714,24 +714,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_timer.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_version.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_image.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mixer.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -740,37 +740,37 @@
 	"begin_code.h"
 	"close_code.h"
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_ttf.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1412529202 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec3.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec3.hpp
 	<algorithm>
 	<SGL/Core/Types.hpp>
 	<SGL/Math/vec3.inl>
 
-1412348768 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\rect.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\rect.hpp
 	<SGL/Core/SDL.hpp>
 	<SGL/Core/Types.hpp>
 	<SGL/Math/vec2.hpp>
 	<SGL/Math/Rect.inl>
 
-1411750413 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vertex.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vertex.hpp
 	<SGL/Math/vec2.hpp>
 	<SGL/Graphic/Color.hpp>
 
-1412260880 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\color.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\color.hpp
 	<SGL/Core/Types.hpp>
 
-1412551020 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
+1412714979 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
 	"TileMap.hpp"
 	<SGL/Window/Window.hpp>
 	<SGL/Graphic/Surface.hpp>
 	"Objects/Factory.hpp"
 	"Objects/Entities/Quinn.hpp"
 
-1412550723 c:\users\besitzer\documents\github\flatlands---esoe\tilemap.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\tilemap.hpp
 	<string>
 	<vector>
 	<memory>
@@ -785,16 +785,16 @@
 	"Interaction.hpp"
 	"Config.hpp"
 
-1412279844 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\texture.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\texture.hpp
 	<SGL/Core/Types.hpp>
 	<SGL/Core/Check.hpp>
 	<SGL/Core/GL.hpp>
 
-1411764959 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\check.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\check.hpp
 	<iostream>
 	<SGL/Core/Config.hpp>
 
-1411552422 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\gl.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\gl.hpp
 	<SGL/Core/Config.hpp>
 	"../libs/64/GL/glew.h"
 	"../libs/32/GL/glew.h"
@@ -802,7 +802,7 @@
 	<gl/gl.h>
 	<windows.h>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\gl\glew.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\64\gl\glew.h
 	<stddef.h>
 	<inttypes.h>
 	<stdint.h>
@@ -811,7 +811,7 @@
 	<OpenGL/glu.h>
 	<GL/glu.h>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\gl\glew.h
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\libs\32\gl\glew.h
 	<stddef.h>
 	<inttypes.h>
 	<stdint.h>
@@ -820,20 +820,20 @@
 	<OpenGL/glu.h>
 	<GL/glu.h>
 
-1412371548 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\surface.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\surface.hpp
 	<string>
 	<SGL/Core/SDL_Image.hpp>
 	<SGL/Core/Check.hpp>
 	<SGL/Math/Rect.hpp>
 	<SGL/Graphic/Color.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\all.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\all.hpp
 	<SGL/Window.hpp>
 	<SGL/Math.hpp>
 	<SGL/Graphic.hpp>
 	<SGL/Audio.hpp>
 
-1412263007 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window.hpp
 	<SGL/System/Keyboard.hpp>
 	<SGL/System/Mouse.hpp>
 	<SGL/System/Event.hpp>
@@ -843,31 +843,31 @@
 	<SGL/System/Display.hpp>
 	<SGL/Window/Window.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\keyboard.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\keyboard.hpp
 	<SGL/Core/SDL.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\mouse.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\mouse.hpp
 	<SGL/Core/SDL.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\event.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\event.hpp
 	<SGL/Core/Types.hpp>
 	<SGL/System/Keyboard.hpp>
 	<SGL/System/Mouse.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\battery.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\battery.hpp
 	<SGL/Core/SDL.hpp>
 	<SGL/Core/Types.hpp>
 
-1412372833 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\stopwatch.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\stopwatch.hpp
 	<SGL/Core/Types.hpp>
 
-1412278769 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\font.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\font.hpp
 	<string>
 	<SGL/Core/SDL_TTF.hpp>
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Color.hpp>
 
-1412371617 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\window.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\window.hpp
 	<string>
 	<vector>
 	<SGL/Math/mat4.hpp>
@@ -879,7 +879,7 @@
 
 1411755570 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\init.hpp
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math.hpp
 	<SGL/Math/mat4.hpp>
 	<SGL/Math/Rect.hpp>
 	<SGL/Math/vec2.hpp>
@@ -887,10 +887,10 @@
 	<SGL/Math/Vertex.hpp>
 	<SGL/Math/Geometry.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\geometry.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\geometry.hpp
 	<SGL/Core/GL.hpp>
 
-1411394845 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic.hpp
+1411218041 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic.hpp
 	<SGL/Graphic/Color.hpp>
 	<SGL/Graphic/Drawable.hpp>
 	<SGL/Graphic/Transformable.hpp>
@@ -900,13 +900,13 @@
 	<SGL/Graphic/Sprite.hpp>
 	<SGL/Graphic/Text.hpp>
 
-1412260594 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\shape.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\shape.hpp
 	<vector>
 	<SGL/Graphic/Drawable.hpp>
 	<SGL/Graphic/Transformable.hpp>
 	<SGL/Math/Vertex.hpp>
 
-1412279632 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\text.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\text.hpp
 	<string>
 	<sstream>
 	<SGL/Core/Config.hpp>
@@ -917,17 +917,17 @@
 	<SGL/Math/Vertex.hpp>
 	<SGL/System/Font.hpp>
 
-1409250432 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio.hpp
+1411035030 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio.hpp
 	<SGL/Audio/Music.hpp>
 	<SGL/Audio/Sound.hpp>
 
-1412262469 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio\music.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio\music.hpp
 	<string>
 	<SGL/Core/SDL_Mixer.hpp>
 	<SGL/Core/Types.hpp>
 	<SGL/Core/Check.hpp>
 
-1412262464 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio\sound.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\audio\sound.hpp
 	<string>
 	<SGL/Core/SDL_Mixer.hpp>
 	<SGL/Core/Types.hpp>
@@ -979,112 +979,107 @@
 	"Stream.hpp"
 	<iostream>
 
-1411756249 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\style.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\style.hpp
 	<SGL/Core/SDL.hpp>
 
-1411754816 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\swapinterval.hpp
+1411825763 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\window\swapinterval.hpp
 
-1412262411 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_ttf.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_ttf.hpp
 	<SGL/Core/Config.hpp>
 	"../libs/64/SDL2/SDL_ttf.h"
 	"../libs/32/SDL2/SDL_ttf.h"
 
-1412371646 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\display.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\system\display.hpp
 	<SGL/Core/Types.hpp>
 	<SGL/Math/Rect.hpp>
 
-1412262360 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_image.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_image.hpp
 	<SGL/Core/Config.hpp>
 	"../libs/64/SDL2/SDL_image.h"
 	"../libs/32/SDL2/SDL_image.h"
 
-1412262385 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_mixer.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\core\sdl_mixer.hpp
 	<SGL/Core/Config.hpp>
 	"../libs/64/SDL2/SDL_mixer.h"
 	"../libs/32/SDL2/SDL_mixer.h"
 
-1412551976 c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.hpp
+1412714746 c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.hpp
 	"FlatLandObject.hpp"
+	"ID.hpp"
 
-1412551762 c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.hpp
+1412714146 c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.hpp
 	<iostream>
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Sprite.hpp>
-	"ID.hpp"
 
-1412531893 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
+1412715641 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
 	"Bug.hpp"
 	"../Tile.hpp"
 	<SGL/Graphic/Surface.hpp>
 
-1412522944 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
+1412715127 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
 	"../Entity.hpp"
 	<SGL/Graphic/Texture.hpp>
-	<SGL/System/StopWatch.hpp>
 
-1412552199 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
+1412715133 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
 	"FlatLandObject.hpp"
 	"Direction.hpp"
+	<SGL/System/StopWatch.hpp>
 
-1412522622 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
+1412714517 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
 	"Entity.hpp"
-	"Item.hpp"
 
-1412551717 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.cpp
+1412714129 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\flatlandobject.cpp
 	"FlatLandObject.hpp"
 	<SGL/Window/Window.hpp>
-	"Entity.hpp"
-	"Item.hpp"
-	"Tile.hpp"
-	"Stream.hpp"
 	"../Config.hpp"
 
-1412425474 c:\users\besitzer\documents\github\flatlands---esoe\objects\item.hpp
+1412715987 c:\users\besitzer\documents\github\flatlands---esoe\objects\item.hpp
 	"FlatLandObject.hpp"
 
-1412522043 c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.hpp
+1412715004 c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.hpp
 	"FlatLandObject.hpp"
 	"Direction.hpp"
 	<SGL/System/StopWatch.hpp>
 
-1412353748 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\item.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\item.cpp
 	"Item.hpp"
 
-1412519871 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\items\crystall.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\items\crystall.cpp
 	"Crystall.hpp"
 
-1412519878 c:\users\besitzer\documents\github\flatlands---esoe\objects\items\crystall.hpp
+1412716253 c:\users\besitzer\documents\github\flatlands---esoe\objects\items\crystall.hpp
 	"../Item.hpp"
 
-1412519811 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.cpp
+1412714964 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\stream.cpp
 	"Stream.hpp"
 	"Entity.hpp"
 	<SGL/Window/Window.hpp>
 
-1412522301 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tile.cpp
 	"Tile.hpp"
 
-1412510668 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.cpp
 	"Gras.hpp"
 	<SGL/Window/Window.hpp>
 
-1412510652 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\gras.hpp
 	"../Tile.hpp"
 
-1412284187 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.cpp
 	"Ground.hpp"
 	<SGL/Window/Window.hpp>
 
-1412425437 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.hpp
 	"../Tile.hpp"
 
-1412551393 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
 	<SGL/Core/Types.hpp>
 	<SGL/Graphic/Texture.hpp>
 	<SGL/Math/vec2.hpp>
 	"ID.hpp"
 
-1412429896 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.cpp
 	"Factory.hpp"
 	"Tiles/Gras.hpp"
 	"Tiles/Ground.hpp"
@@ -1093,71 +1088,69 @@
 	"Entities/Bug.hpp"
 	"Stream.hpp"
 
-1412511609 source:c:\users\besitzer\documents\github\flatlands---esoe\level.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\level.cpp
 	"Level.hpp"
 	<sstream>
 	<SGL/Window/Window.hpp>
 
-1412550942 c:\users\besitzer\documents\github\flatlands---esoe\level.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\level.hpp
 	<string>
 	<memory>
 	"TileMap.hpp"
 	"Background.hpp"
 
-1412552328 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.cpp
+1412716164 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.cpp
 	"Quinn.hpp"
+	"../Item.hpp"
+	"../Stream.hpp"
 	"../../Config.hpp"
 
-1412551122 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.hpp
+1412716208 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.hpp
 	"../Entity.hpp"
 	"../Direction.hpp"
 
-1412529828 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec2.inl
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec2.inl
 
-1412528354 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\rect.inl
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\rect.inl
 
-1412530047 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec3.inl
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\math\vec3.inl
 
-1412523569 c:\users\besitzer\documents\github\flatlands---esoe\background.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\background.hpp
 	<string>
 	<memory>
 	<vector>
 	"Objects/Cloud.hpp"
 	"Config.hpp"
 
-1412532962 c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.hpp
 	"FlatLandObject.hpp"
 	<SGL/Graphic/Texture.hpp>
 	<SGL/System/StopWatch.hpp>
 
-1412529555 source:c:\users\besitzer\documents\github\flatlands---esoe\background.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\background.cpp
 	"Background.hpp"
 	<sstream>
 	<SGL/Graphic/Surface.hpp>
 	<SGL/Window/Window.hpp>
 
-1412536760 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.cpp
+1412596331 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\cloud.cpp
 	"Cloud.hpp"
 	<random>
 	<sstream>
 	<SGL/Graphic/Surface.hpp>
 
-1412520134 c:\users\besitzer\documents\github\flatlands---esoe\objects\direction.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\direction.hpp
 
-1412523596 c:\users\besitzer\documents\github\flatlands---esoe\config.hpp
+1412716080 c:\users\besitzer\documents\github\flatlands---esoe\config.hpp
 	<string>
 
-1412552295 source:c:\users\besitzer\documents\github\flatlands---esoe\interaction.cpp
+1412716098 source:c:\users\besitzer\documents\github\flatlands---esoe\interaction.cpp
 	"Interaction.hpp"
 	"Objects/Tile.hpp"
-	"Objects/Item.hpp"
 	"Objects/Entity.hpp"
-	"Objects/Stream.hpp"
 	"TileMap.hpp"
-	"Objects/ID.hpp"
 
-1412551430 c:\users\besitzer\documents\github\flatlands---esoe\interaction.hpp
-	"Objects/FlatLandObject.hpp"
+1412713992 c:\users\besitzer\documents\github\flatlands---esoe\interaction.hpp
 
-1412551385 c:\users\besitzer\documents\github\flatlands---esoe\objects\id.hpp
+1412596331 c:\users\besitzer\documents\github\flatlands---esoe\objects\id.hpp
 

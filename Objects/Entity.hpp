@@ -3,10 +3,17 @@
 
 #include "FlatLandObject.hpp"
 #include "Direction.hpp"
+#include <SGL/System/StopWatch.hpp>
+
+class Item;
+class Stream;
 
 class Entity : public FlatLandObject {
 protected:
+    sgl::StopWatch _clock;
     Direction _dir = Direction::Left;
+
+private:
     bool _onGround = true;
 
 public:
@@ -21,16 +28,17 @@ public:
         return _onGround;
     }
 
-    bool onGround() {
-        _onGround = true;
+    void noGround() {
+        _onGround = false;
     }
 
-    virtual void noGround() {
-        _onGround = false;
+    void onGround() {
+        _onGround = true;
     }
 
     virtual void interactWith(Entity*) { }
     virtual void interactWith(Item*) { }
+    virtual void interactWith(Stream*) { }
 };
 
 #endif

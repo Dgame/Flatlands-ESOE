@@ -5,16 +5,9 @@
 #include <SGL/Core/Types.hpp>
 #include <SGL/Graphic/Sprite.hpp>
 
-#include "ID.hpp"
-
 namespace sgl {
     class Window;
 }
-
-class Entity;
-class Tile;
-class Item;
-class Stream;
 
 class FlatLandObject {
 protected:
@@ -35,15 +28,9 @@ public:
     }
 
     const sgl::vec2f& getPosition() const;
-
     void draw(const sgl::Window*) const;
 
     virtual void update() { }
-
-    virtual void interactWith(Entity*) { }
-    virtual void interactWith(Tile*) { }
-    virtual void interactWith(Item*) { }
-    virtual void interactWith(Stream*) { }
 };
 
 #endif // FLATLAND_OBJECT_HPP
