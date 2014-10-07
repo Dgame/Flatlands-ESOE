@@ -3,6 +3,7 @@
 #include <SGL/Graphic/Surface.hpp>
 #include "Objects/Factory.hpp"
 #include "Objects/Entities/Quinn.hpp"
+#include "Interaction.hpp"
 
 namespace {
     std::vector<std::string> split(const std::string& str, char delim) {
@@ -103,7 +104,7 @@ void TileMap::update() {
     }
 
     for (std::unique_ptr<Entity>& entity : _entities) {
-        _interaction.treat(entity.get(), this);
+        Interaction(entity.get(), this);
 
         entity->update();
     }

@@ -4,8 +4,6 @@
 class Entity;
 class TileMap;
 
-struct Interaction {
-    void treat(Entity*, TileMap*);
-};
+void Interaction(Entity*, TileMap*);
 
 #endif // FLATLAND_INTERACTION_HPP

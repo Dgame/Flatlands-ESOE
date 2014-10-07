@@ -5,7 +5,7 @@
 
 #include "TileMap.hpp"
 
-void Interaction::treat(Entity* entity, TileMap* tm) {
+void Interaction(Entity* entity, TileMap* tm) {
     // TODO: observe if entity is falling and animate falling smooth
     sgl::vec2f pos = entity->getPosition();
 

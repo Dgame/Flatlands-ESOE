@@ -15,7 +15,6 @@
 #include "Objects/Item.hpp"
 #include "Objects/Entity.hpp"
 
-#include "Interaction.hpp"
 #include "Config.hpp"
 
 class Quinn;
@@ -51,7 +50,6 @@ private:
     Quinn* _quinn = nullptr;
 
     sgl::Texture _tileset;
-    Interaction _interaction;
 
     sgl::uint16 _width;
     sgl::uint16 _height;
