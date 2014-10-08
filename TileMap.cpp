@@ -31,9 +31,6 @@ void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
         {
             Item* item = make_item(id, _tileset, pos);
             _items.push_back(std::unique_ptr<Item>(item));
-
-            Tile* tile = make_tile(ID::Gras, _tileset, pos);
-            _tiles.push_back(std::unique_ptr<Tile>(tile));
         }
         break;
         case Cat::Stream:
@@ -46,11 +43,13 @@ void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
         {
             Entity* entity = make_entity(id, _tileset, pos);
             _entities.push_back(std::unique_ptr<Entity>(entity));
-
-            Tile* tile = make_tile(ID::Gras, _tileset, pos);
-            _tiles.push_back(std::unique_ptr<Tile>(tile));
         }
         break;
+    }
+
+    if (cat == Cat::Item || cat == Cat::Entity) {
+        Tile* tile = make_tile(ID::Gras, _tileset, pos);
+        _tiles.push_back(std::unique_ptr<Tile>(tile));
     }
 }
 
@@ -110,7 +109,8 @@ void TileMap::update() {
     }
 
     for (std::unique_ptr<Item>& item : _items) {
-        item->update();
+        if (item->isActive())
+            item->update();
     }
 
     for (std::unique_ptr<Stream>& stream : _streams) {
@@ -124,7 +124,8 @@ void TileMap::draw(const sgl::Window* wnd) const {
     }
 
     for (const std::unique_ptr<Item>& item : _items) {
-        item->draw(wnd);
+        if (item->isActive())
+            item->draw(wnd);
     }
 
     for (const std::unique_ptr<Entity>& entity : _entities) {
@@ -137,24 +138,17 @@ void TileMap::draw(const sgl::Window* wnd) const {
 }
 
 Tile* TileMap::getTileAt(const sgl::vec2f& pos) {
-    const sgl::vec2s global_pos = PixelToPos(pos);
-    for (std::unique_ptr<Tile>& tile : _tiles) {
-        const sgl::vec2s global_tile_pos = PixelToPos(tile->getPosition());
-        if (global_pos == global_tile_pos)
-            return tile.get();
-    }
-
-    return nullptr;
+    return this->getAt(pos, _tiles);
 }
 
-Item* TileMap::getItemAt(const sgl::vec2f&) {
-    return nullptr;
+Item* TileMap::getItemAt(const sgl::vec2f& pos) {
+    return this->getAt(pos, _items);
 }
 
-Entity* TileMap::getEntityAt(const sgl::vec2f&) {
-    return nullptr;
+Entity* TileMap::getEntityAt(const sgl::vec2f& pos) {
+    return this->getAt(pos, _entities);
 }
 
-Stream* TileMap::getStreamAt(const sgl::vec2f&) {
-    return nullptr;
+Stream* TileMap::getStreamAt(const sgl::vec2f& pos) {
+    return this->getAt(pos, _streams);
 }

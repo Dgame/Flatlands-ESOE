@@ -1,5 +1,4 @@
 #include "Bug.hpp"
-#include "../Tile.hpp"
 #include <SGL/Graphic/Surface.hpp>
 
 Bug::Bug(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : Entity(id, texture, pos) {
@@ -14,7 +13,7 @@ Bug::Bug(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : Entity(id
 }
 
 void Bug::update() {
-    if (!this->isOnGround()) {
+    if (!_onGround) {
         if (_dir == Direction::Left) {
             _dir = Direction::Right;
             _sprite.setTexture(_right_texture);

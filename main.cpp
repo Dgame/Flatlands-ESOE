@@ -8,8 +8,20 @@ int main() {
     wnd.setSwapInterval(sgl::SwapInterval::Immediate);
 
     sgl::Font fnt("media/arial.ttf", 16);
+
+    sgl::Text fps_show(fnt);
+    fps_show = "FPS: ";
+    fps_show.setPosition(1024 - 80, 8);
+
+    sgl::Text vert_show(fnt);
+    vert_show = "Vertex Count: ";
+    vert_show.setPosition(1024 - 300, 8);
+
     sgl::Text fps(fnt);
     fps.setPosition(1024 - 40, 8);
+
+    sgl::Text vert(fnt);
+    vert.setPosition(1024 - 200, 8);
 
     sgl::Surface quinn("media/Quinn.png");
     quinn.setAsIcon();
@@ -39,11 +51,15 @@ int main() {
         }
 
         fps.setData(sgl::GetFPS());
+        vert.setData(level.getQuinn()->getVertexCount());
 
         level.update();
         level.draw(&wnd);
 
+        wnd.draw(fps_show);
         wnd.draw(fps);
+        wnd.draw(vert_show);
+        wnd.draw(vert);
 
         wnd.display();
     }

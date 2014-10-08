@@ -57,6 +57,9 @@ private:
 private:
     void _generate(sgl::int8 id, const sgl::vec2s&);
 
+    template <typename T>
+    T* getAt(const sgl::vec2f&, std::vector<std::unique_ptr<T>>&);
+
 public:
     explicit TileMap(const std::string&);
 
@@ -80,5 +83,19 @@ public:
         return _height;
     }
 };
+
+template <typename T>
+T* TileMap::getAt(const sgl::vec2f& pos, std::vector<std::unique_ptr<T>>& my_values) {
+    const sgl::vec2s pixel_pos = PixelToPos(pos);
+
+    for (std::unique_ptr<T>& value : my_values) {
+        const sgl::vec2s value_pixel_pos = PixelToPos(value->getPosition());
+
+        if (pixel_pos == value_pixel_pos)
+            return value.get();
+    }
+
+    return nullptr;
+}
 
 #endif // FLATLAND_TILE_MAP_HPP

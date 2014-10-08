@@ -8,11 +8,28 @@ Quinn::Quinn(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : Entit
 }
 
 void Quinn::move(Direction dir) {
-    if (this->isOnGround()) {
-        if (_clock.getElapsedMs() > 50) {
-            _clock.reset();
+    if (_onGround) {
+        _moving = true;
+        _dir = dir;
+    }
+}
 
-            switch (dir) {
+void Quinn::update() {
+    if (_clock.getElapsedMs() > 100) {
+        _clock.reset();
+
+        // Fallen und streamen mit Rotation
+        if (!_onGround || _onStream) {
+            _sprite.rotate(45);
+            if (_onStream)
+                _sprite.move(_stream->getForce());
+        }
+
+        // Bewegen
+        if (_moving) {
+            _moving = false;
+
+            switch (_dir) {
                 case Direction::Left:
                     _sprite.move(-HALF_TILE_SIZE, 0);
                 break;
@@ -22,26 +39,32 @@ void Quinn::move(Direction dir) {
 
             _sprite.rotate(90);
         }
+
+        // Gravity
+        if (!_onGround && !_onStream)
+            _sprite.move(0, GRAVITY);
+    }
+
+    // Liegen wir schräg?
+    if (_onGround && !_onStream) {
+        if (fmod(_sprite.getRotation(), 90))
+            _sprite.setRotation(0);
     }
 }
 
-void Quinn::update() {
-    if (!this->isOnGround()) {
-        if (_clock.getElapsedMs() > 50) {
-            _clock.reset();
-            _sprite.move(0, HALF_TILE_SIZE);
-        }
+void Quinn::interactWith(const Item* item) {
+    if (item && item->isActive())
+        _vertex_count += item->getValue();
+}
+
+void Quinn::interactWith(const Stream* stream) {
+    if (stream)
+        _onStream = true;
+    else if (_onStream) {
+        // Wenn wir gestreamt haben -> weiter fortbewegen
+        _moving = true;
+        _onStream = false;
     }
-}
 
-void Quinn::interactWith(Entity*) {
-
-}
-
-void Quinn::interactWith(Item*) {
-
-}
-
-void Quinn::interactWith(Stream*) {
-
+    _stream = stream;
 }

@@ -4,7 +4,6 @@
 #include "../Entity.hpp"
 #include <SGL/Graphic/Texture.hpp>
 
-
 class Bug : public Entity {
 private:
     sgl::Texture _left_texture;
@@ -13,6 +12,10 @@ private:
 public:
     explicit Bug(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~Bug() { }
+
+    virtual bool isEffectedByGravity() const override {
+        return false;
+    }
 
     virtual void update() override;
 };

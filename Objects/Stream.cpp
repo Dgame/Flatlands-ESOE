@@ -1,5 +1,6 @@
 #include "Stream.hpp"
 #include "Entity.hpp"
+#include "../Config.hpp"
 #include <SGL/Window/Window.hpp>
 
 Stream::Stream(Direction dir, sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : FlatLandObject(id, texture, pos), _dir(dir) {
@@ -35,4 +36,19 @@ void Stream::update() {
             break;
         }
     }
+}
+
+sgl::vec2s Stream::getForce() const {
+    switch (_dir) {
+        case Direction::Up:
+            return sgl::vec2s(0, DOUBLE_TILE_SIZE * -1);
+        case Direction::Down:
+            return sgl::vec2s(0, DOUBLE_TILE_SIZE);
+        case Direction::Left:
+            return sgl::vec2s(DOUBLE_TILE_SIZE * -1, 0);
+        case Direction::Right:
+            return sgl::vec2s(DOUBLE_TILE_SIZE, 0);
+    }
+
+    throw std::runtime_error("No direction.");
 }

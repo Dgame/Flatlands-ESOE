@@ -7,14 +7,15 @@
 
 class Item;
 class Stream;
+class Tile;
 
 class Entity : public FlatLandObject {
 protected:
     sgl::StopWatch _clock;
     Direction _dir = Direction::Left;
 
-private:
     bool _onGround = true;
+    bool _onStream = false;
 
 public:
     explicit Entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
@@ -28,17 +29,23 @@ public:
         return _onGround;
     }
 
-    void noGround() {
-        _onGround = false;
+    bool isOnStream() const {
+        return _onStream;
     }
 
-    void onGround() {
-        _onGround = true;
+    virtual bool catchItems() const {
+        return false;
     }
 
-    virtual void interactWith(Entity*) { }
-    virtual void interactWith(Item*) { }
-    virtual void interactWith(Stream*) { }
+    virtual bool isEffectedByGravity() const {
+        return true;
+    }
+
+    virtual void interactWith(const Tile*);
+
+    virtual void interactWith(const Item*) { }
+    virtual void interactWith(const Stream*) { }
+    virtual void interactWith(const Entity*) { }
 };
 
 #endif
