@@ -2,6 +2,7 @@
 #include "Entity.hpp"
 #include "../Config.hpp"
 #include <SGL/Window/Window.hpp>
+#include <stdexcept>
 
 Stream::Stream(Direction dir, sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : FlatLandObject(id, texture, pos), _dir(dir) {
 

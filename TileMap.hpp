@@ -20,8 +20,6 @@
 class Quinn;
 
 namespace {
-    std::vector<std::string> split(const std::string&, char delim);
-
     inline int toInt(const char* value) {
         std::stringstream buf;
         buf << value;

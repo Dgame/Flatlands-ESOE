@@ -47,7 +47,8 @@ void Quinn::update() {
 
     // Liegen wir schräg?
     if (_onGround && !_onStream) {
-        if (fmod(_sprite.getRotation(), 90))
+        const int mod = static_cast<int>(fmod(_sprite.getRotation(), 90));
+        if (mod > 0)
             _sprite.setRotation(0);
     }
 }
