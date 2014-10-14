@@ -25,6 +25,9 @@ public:
         return _dir;
     }
 
+    void reverseDirection();
+    void outOfBounds();
+
     bool isOnGround() const {
         return _onGround;
     }

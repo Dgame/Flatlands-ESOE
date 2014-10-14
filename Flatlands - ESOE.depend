@@ -25,7 +25,7 @@
 
 1411394745 c:\users\besitzer\documents\github\flatlands---esoe\libs\pugixml\src\pugiconfig.hpp
 
-1413229058 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
+1413289744 source:c:\users\besitzer\documents\github\flatlands---esoe\main.cpp
 	<iostream>
 	<SGL/all.hpp>
 	"Level.hpp"
@@ -762,7 +762,7 @@
 1412260880 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\color.hpp
 	<SGL/Core/Types.hpp>
 
-1413286577 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
+1413290710 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
 	"TileMap.hpp"
 	<SGL/Window/Window.hpp>
 	<SGL/Graphic/Surface.hpp>
@@ -1012,20 +1012,20 @@
 	<SGL/Graphic/Sprite.hpp>
 	"../DrawObject.hpp"
 
-1413229058 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
+1413290359 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
 	"Bug.hpp"
 	<SGL/Graphic/Surface.hpp>
 
-1413229058 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
+1413290367 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
 	"../Entity.hpp"
 	<SGL/Graphic/Texture.hpp>
 
-1413229058 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
+1413290744 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
 	"FlatLandObject.hpp"
 	"Direction.hpp"
 	<SGL/System/StopWatch.hpp>
 
-1413229058 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
+1413290811 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
 	"Entity.hpp"
 	"Tile.hpp"
 
@@ -1180,7 +1180,7 @@
 1413284632 c:\users\besitzer\documents\github\flatlands---esoe\drawobject.hpp
 	<iostream>
 
-1413287167 source:c:\users\besitzer\documents\github\flatlands---esoe\effects\crystallcatched.cpp
+1413288829 source:c:\users\besitzer\documents\github\flatlands---esoe\effects\crystallcatched.cpp
 	"CrystallCatched.hpp"
 	<SGL/Window/Window.hpp>
 

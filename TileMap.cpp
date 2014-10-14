@@ -102,10 +102,16 @@ void TileMap::update() {
         tile->update();
     }
 
+    const sgl::int32 MapWidth = _width * TILE_SIZE - TILE_SIZE;
+
     for (std::unique_ptr<Entity>& entity : _entities) {
         Effect* effect = Interaction(entity.get(), this);
         if (effect)
             _effects.push_back(std::unique_ptr<Effect>(effect));
+
+        const float pos_x = entity->getPosition().x;
+        if (pos_x >= MapWidth || pos_x <= 0)
+            entity->outOfBounds();
 
         entity->update();
     }

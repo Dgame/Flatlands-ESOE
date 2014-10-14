@@ -8,17 +8,18 @@ int main() {
     wnd.setSwapInterval(sgl::SwapInterval::Immediate);
 
     sgl::Font fnt("media/arial.ttf", 16);
+    fnt.setStyle(sgl::Font::Style::Bold);
 
     sgl::Text fps_show(fnt);
     fps_show = "FPS: ";
-    fps_show.setPosition(1024 - 80, 8);
+    fps_show.setPosition(1024 - 100, 8);
 
     sgl::Text vert_show(fnt);
     vert_show = "Vertex Count: ";
-    vert_show.setPosition(1024 - 300, 8);
+    vert_show.setPosition(1024 - 310, 8);
 
     sgl::Text fps(fnt);
-    fps.setPosition(1024 - 40, 8);
+    fps.setPosition(1024 - 60, 8);
 
     sgl::Text vert(fnt);
     vert.setPosition(1024 - 200, 8);
