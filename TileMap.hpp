@@ -15,6 +15,8 @@
 #include "Objects/Item.hpp"
 #include "Objects/Entity.hpp"
 
+#include "Effects/Effect.hpp"
+
 #include "Config.hpp"
 
 class Quinn;
@@ -44,6 +46,7 @@ private:
     std::vector<std::unique_ptr<Item>> _items;
     std::vector<std::unique_ptr<Stream>> _streams;
     std::vector<std::unique_ptr<Entity>> _entities;
+    std::vector<std::unique_ptr<Effect>> _effects;
 
     Quinn* _quinn = nullptr;
 

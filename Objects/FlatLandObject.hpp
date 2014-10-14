@@ -1,21 +1,20 @@
 #ifndef FLATLAND_OBJECT_HPP
 #define FLATLAND_OBJECT_HPP
 
-#include <iostream>
 #include <SGL/Core/Types.hpp>
 #include <SGL/Graphic/Sprite.hpp>
+#include "../DrawObject.hpp"
 
 namespace sgl {
-    class Window;
+    class Texture;
 }
 
-class FlatLandObject {
+class FlatLandObject : public DrawObject {
 protected:
-    sgl::int8 _id;
     sgl::Sprite _sprite;
+    sgl::int8 _id;
 
 public:
-    explicit FlatLandObject(sgl::Texture&);
     explicit FlatLandObject(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~FlatLandObject() { }
 
@@ -28,9 +27,7 @@ public:
     }
 
     const sgl::vec2f& getPosition() const;
-    void draw(const sgl::Window*) const;
-
-    virtual void update() { }
+    void draw(const sgl::Window*) const override;
 };
 
 #endif // FLATLAND_OBJECT_HPP

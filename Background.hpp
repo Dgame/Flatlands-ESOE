@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 #include "Objects/Cloud.hpp"
-#include "Config.hpp"
+#include <SGL/Graphic/Sprite.hpp>
 
 class Background {
 private:

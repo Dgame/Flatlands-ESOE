@@ -103,7 +103,9 @@ void TileMap::update() {
     }
 
     for (std::unique_ptr<Entity>& entity : _entities) {
-        Interaction(entity.get(), this);
+        Effect* effect = Interaction(entity.get(), this);
+        if (effect)
+            _effects.push_back(std::unique_ptr<Effect>(effect));
 
         entity->update();
     }
@@ -115,6 +117,11 @@ void TileMap::update() {
 
     for (std::unique_ptr<Stream>& stream : _streams) {
         stream->update();
+    }
+
+    for (std::unique_ptr<Effect>& effect : _effects) {
+        if (effect->isValid())
+            effect->update();
     }
 }
 
@@ -134,6 +141,11 @@ void TileMap::draw(const sgl::Window* wnd) const {
 
     for (const std::unique_ptr<Stream>& stream : _streams) {
         stream->draw(wnd);
+    }
+
+    for (const std::unique_ptr<Effect>& effect : _effects) {
+        if (effect->isValid())
+            effect->draw(wnd);
     }
 }
 

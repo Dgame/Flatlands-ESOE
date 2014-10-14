@@ -2,6 +2,7 @@
 #include <sstream>
 #include <SGL/Graphic/Surface.hpp>
 #include <SGL/Window/Window.hpp>
+#include "Config.hpp"
 
 Background::Background(sgl::uint16 level) {
     std::stringstream buf;

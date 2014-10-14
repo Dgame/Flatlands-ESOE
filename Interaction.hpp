@@ -3,7 +3,8 @@
 
 class Entity;
 class TileMap;
+class Effect;
 
-void Interaction(Entity*, TileMap*);
+Effect* Interaction(Entity*, TileMap*);
 
 #endif // FLATLAND_INTERACTION_HPP

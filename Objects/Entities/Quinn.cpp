@@ -54,8 +54,7 @@ void Quinn::update() {
 }
 
 void Quinn::interactWith(const Item* item) {
-    if (item && item->isActive())
-        _vertex_count += item->getValue();
+    _vertex_count += item->getValue();
 }
 
 void Quinn::interactWith(const Stream* stream) {

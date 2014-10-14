@@ -11,7 +11,8 @@ public:
     explicit Crystall(sgl::int16 val, sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~Crystall() { }
 
-    virtual sgl::int8 getValue() const override;
+    virtual Effect* getEffect() const override;
+    virtual sgl::int16 getValue() const override;
 };
 
 #endif // FLATLAND_CRYSTALL_HPP

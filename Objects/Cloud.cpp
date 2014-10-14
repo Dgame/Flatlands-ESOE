@@ -2,12 +2,13 @@
 #include <random>
 #include <sstream>
 #include <SGL/Graphic/Surface.hpp>
+#include <SGL/Window/Window.hpp>
 
 namespace {
     sgl::uint16 CloudID = 1;
 }
 
-Cloud::Cloud(int which) : FlatLandObject(_texture) {
+Cloud::Cloud(int which) {
     _spawn();
 
     if (which < 0)
@@ -82,4 +83,8 @@ void Cloud::update() {
             _respawn();
         }
     }
+}
+
+void Cloud::draw(const sgl::Window* wnd) const {
+    wnd->draw(_sprite);
 }

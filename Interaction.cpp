@@ -2,10 +2,11 @@
 
 #include "Objects/Tile.hpp"
 #include "Objects/Entity.hpp"
+#include "Effects/Effect.hpp"
 
 #include "TileMap.hpp"
 
-void Interaction(Entity* entity, TileMap* tm) {
+Effect* Interaction(Entity* entity, TileMap* tm) {
     // TODO: observe if entity is falling and animate falling smooth
     sgl::vec2f pos = entity->getPosition();
     // if not effected by gravity: look forward
@@ -28,8 +29,15 @@ void Interaction(Entity* entity, TileMap* tm) {
     entity->interactWith(stream);
 
     Item* item = tm->getItemAt(pos);
-    entity->interactWith(item);
+    if (item && item->isActive()) {
+        entity->interactWith(item);
 
-    if (item && entity->catchItems())
-        item->disable();
+        if (item && entity->catchItems()) {
+            item->disable();
+
+            return item->getEffect();
+        }
+    }
+
+    return nullptr;
 }
