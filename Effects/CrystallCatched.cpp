@@ -5,6 +5,8 @@ CrystallCatched::CrystallCatched(sgl::int16 value, const sgl::vec2s& pos) : Effe
     _font.setStyle(sgl::Font::Style::Bold);
 
     _text.setData(value);
+    _text.setData("+" + _text.getText());
+
     _text.foreground = sgl::Color4b::Green;
     _text.setPosition(pos);
 }
