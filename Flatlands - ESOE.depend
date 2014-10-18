@@ -762,7 +762,7 @@
 1412260880 c:\users\besitzer\documents\github\flatlands---esoe\libs\sgl\include\sgl\graphic\color.hpp
 	<SGL/Core/Types.hpp>
 
-1413290929 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
+1413637383 source:c:\users\besitzer\documents\github\flatlands---esoe\tilemap.cpp
 	"TileMap.hpp"
 	<SGL/Window/Window.hpp>
 	<SGL/Graphic/Surface.hpp>
@@ -1012,20 +1012,21 @@
 	<SGL/Graphic/Sprite.hpp>
 	"../DrawObject.hpp"
 
-1413290359 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
+1413663453 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.cpp
 	"Bug.hpp"
+	"../../Config.hpp"
 	<SGL/Graphic/Surface.hpp>
 
-1413290367 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
+1413663418 c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\bug.hpp
 	"../Entity.hpp"
 	<SGL/Graphic/Texture.hpp>
 
-1413290744 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
+1413663372 c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.hpp
 	"FlatLandObject.hpp"
 	"Direction.hpp"
 	<SGL/System/StopWatch.hpp>
 
-1413290811 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
+1413663692 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entity.cpp
 	"Entity.hpp"
 	"Tile.hpp"
 
@@ -1077,11 +1078,9 @@
 1412425437 c:\users\besitzer\documents\github\flatlands---esoe\objects\tiles\ground.hpp
 	"../Tile.hpp"
 
-1413637263 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
+1413664162 c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.hpp
 	<SGL/Core/Types.hpp>
-	<SGL/Graphic/Texture.hpp>
 	<SGL/Math/vec2.hpp>
-	"ID.hpp"
 
 1413637218 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\factory.cpp
 	"Factory.hpp"
@@ -1103,7 +1102,7 @@
 	"TileMap.hpp"
 	"Background.hpp"
 
-1413287040 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.cpp
+1413663498 source:c:\users\besitzer\documents\github\flatlands---esoe\objects\entities\quinn.cpp
 	"Quinn.hpp"
 	"../Item.hpp"
 	"../Stream.hpp"
@@ -1151,7 +1150,7 @@
 1413229058 c:\users\besitzer\documents\github\flatlands---esoe\config.hpp
 	<string>
 
-1413636512 source:c:\users\besitzer\documents\github\flatlands---esoe\interaction.cpp
+1413663875 source:c:\users\besitzer\documents\github\flatlands---esoe\interaction.cpp
 	"Interaction.hpp"
 	"Objects/Tile.hpp"
 	"Objects/Entity.hpp"

@@ -7,25 +7,15 @@
 #include "TileMap.hpp"
 
 Effect* Interaction(Entity* entity, TileMap* tm) {
-    sgl::vec2f pos = entity->getPosition();
-    // if not effected by gravity: look forward
-    if (!entity->isEffectedByGravity()) {
-        // Look a half tile to the left / right
-        if (entity->getDirection() == Direction::Left)
-            pos.x -= HALF_TILE_SIZE;
-        else
-            pos.x += HALF_TILE_SIZE;
-    }
-    // look down
-    pos.y += GRAVITY;
+    // Get position
+    const sgl::vec2f& pos = entity->getPosition();
+    // Get next position
+    sgl::vec2f look = pos + entity->getLookOffset();
+    // Look down
+    look.y += GRAVITY;
 
-    const Tile* tile = tm->getTileAt(pos);
-    entity->interactWith(tile);
-
-    pos = entity->getPosition();
-
-    const Stream* stream = tm->getStreamAt(pos);
-    entity->interactWith(stream);
+    entity->interactWith(tm->getTileAt(look));
+    entity->interactWith(tm->getStreamAt(pos));
 
     Item* item = tm->getItemAt(pos);
     if (item && item->isActive()) {

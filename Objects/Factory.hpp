@@ -2,9 +2,11 @@
 #define FLATLAND_FACTORY_HPP
 
 #include <SGL/Core/Types.hpp>
-#include <SGL/Graphic/Texture.hpp>
 #include <SGL/Math/vec2.hpp>
-#include "ID.hpp"
+
+namespace sgl {
+    class Texture;
+}
 
 class Tile;
 class Stream;

@@ -13,9 +13,7 @@ public:
     explicit Bug(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
     virtual ~Bug() { }
 
-    virtual bool isEffectedByGravity() const override {
-        return false;
-    }
+    virtual sgl::vec2f getLookOffset() const override;
 
     virtual void update() override;
 };

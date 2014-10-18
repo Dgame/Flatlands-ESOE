@@ -18,7 +18,7 @@ void Quinn::update() {
     if (_clock.getElapsedMs() > 100) {
         _clock.reset();
 
-        // Fallen und streamen mit Rotation
+        // Fallen / Streamen mit Rotation
         if (!_onGround || _onStream) {
             _sprite.rotate(45);
             if (_onStream)
@@ -47,7 +47,7 @@ void Quinn::update() {
 
     // Liegen wir schräg?
     if (_onGround && !_onStream) {
-        const int mod = static_cast<int>(fmod(_sprite.getRotation(), 90));
+        const float mod = fmod(_sprite.getRotation(), 90);
         if (mod > 0)
             _sprite.setRotation(0);
     }

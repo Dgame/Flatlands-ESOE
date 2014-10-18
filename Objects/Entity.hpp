@@ -26,7 +26,7 @@ public:
     }
 
     void reverseDirection();
-    void outOfBounds();
+    virtual sgl::vec2f getLookOffset() const;
 
     bool isOnGround() const {
         return _onGround;
@@ -40,12 +40,7 @@ public:
         return false;
     }
 
-    virtual bool isEffectedByGravity() const {
-        return true;
-    }
-
     virtual void interactWith(const Tile*);
-
     virtual void interactWith(const Item*) { }
     virtual void interactWith(const Stream*) { }
     virtual void interactWith(const Entity*) { }

@@ -7,6 +7,9 @@
 #include "Entities/Bug.hpp"
 #include "Stream.hpp"
 
+#include <SGL/Graphic/Texture.hpp>
+#include "ID.hpp"
+
 Tile* MakeTile(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     const sgl::int8 tile_id = id - 1;
     switch (id) {
