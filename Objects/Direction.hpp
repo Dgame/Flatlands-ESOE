@@ -8,4 +8,10 @@ enum class Direction : char {
     Right,
 };
 
+inline int DirectionToInt(Direction dir) {
+    if (dir == Direction::Up || dir == Direction::Right)
+        return 1;
+    return -1;
+}
+
 #endif // FLATLAND_DIRECTION_HPP

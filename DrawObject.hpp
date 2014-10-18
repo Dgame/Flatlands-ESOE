@@ -1,6 +1,7 @@
 #ifndef FLATLAND_DRAW_OBJECT_HPP
 #define FLATLAND_DRAW_OBJECT_HPP
 
+// TODO: Only in debug mode
 #include <iostream>
 
 namespace sgl {

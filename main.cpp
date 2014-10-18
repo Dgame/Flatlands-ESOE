@@ -47,6 +47,9 @@ int main() {
                         level.getQuinn()->move(Direction::Left);
                     else if (event.key.key == sgl::Key::Right)
                         level.getQuinn()->move(Direction::Right);
+
+                    if (event.key.key == sgl::Key::Up)
+                        level.getQuinn()->jump();
                 break;
             }
         }

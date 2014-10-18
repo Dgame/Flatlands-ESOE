@@ -3,6 +3,8 @@
 #include <SGL/Graphic/Surface.hpp>
 
 Bug::Bug(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : Entity(id, texture, pos) {
+    _dir = Direction::Left;
+
     sgl::Surface lhs("media/bug_left.png");
     _left_texture.load(lhs);
 
@@ -14,13 +16,7 @@ Bug::Bug(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) : Entity(id
 }
 
 sgl::vec2f Bug::getLookOffset() const {
-    sgl::vec2f offset;
-    if (this->getDirection() == Direction::Left)
-        offset.x -= HALF_TILE_SIZE;
-    else
-        offset.x += HALF_TILE_SIZE;
-
-    return offset;
+    return sgl::vec2f(HALF_TILE_SIZE * DirectionToInt(_dir), 0);
 }
 
 void Bug::update() {
@@ -39,10 +35,7 @@ void Bug::update() {
             _sprite.setClipRect(sgl::ShortRect(0, 0, TILE_SIZE, TILE_SIZE));
         }
 
-        if (_dir == Direction::Left)
-            _sprite.move(-1, 0);
-        else if (_dir == Direction::Right)
-            _sprite.move(1, 0);
+        _sprite.move(1 * DirectionToInt(_dir), 0);
 
         if (_sprite.getClipRect().x == 0) {
             _sprite.setClipRect(sgl::ShortRect(TILE_SIZE, 0, TILE_SIZE, TILE_SIZE));

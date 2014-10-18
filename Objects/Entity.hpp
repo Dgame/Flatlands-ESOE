@@ -12,10 +12,11 @@ class Tile;
 class Entity : public FlatLandObject {
 protected:
     sgl::StopWatch _clock;
-    Direction _dir = Direction::Left;
+    Direction _dir = Direction::Right;
 
     bool _onGround = true;
     bool _onStream = false;
+    bool _onJump = false;
 
 public:
     explicit Entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
@@ -24,6 +25,14 @@ public:
     Direction getDirection() const {
         return _dir;
     }
+
+    void jump();
+
+    bool isOnJump() const {
+        return _onJump;
+    }
+
+    virtual void update() override;
 
     void reverseDirection();
     virtual sgl::vec2f getLookOffset() const;
