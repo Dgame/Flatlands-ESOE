@@ -6,7 +6,24 @@
 #include "Interaction.hpp"
 
 namespace {
-    std::vector<std::string> split(const std::string& str, char delim) {
+    int ToInt(const char* value) {
+        std::stringstream buf;
+        buf << value;
+
+        int num = 0;
+        buf >> num;
+
+        return num;
+    }
+
+    sgl::vec2s PixelToPos(const sgl::vec2f& pos) {
+        const sgl::int16 x = static_cast<sgl::int16>(std::round(pos.x / TILE_SIZE));
+        const sgl::int16 y = static_cast<sgl::int16>(std::round(pos.y / TILE_SIZE));
+
+        return sgl::vec2s(x, y);
+    }
+
+    std::vector<std::string> Split(const std::string& str, char delim) {
         std::vector<std::string> elems;
         std::stringstream ss(str);
 
@@ -16,39 +33,53 @@ namespace {
         }
         return elems;
     }
+
+    template <typename T>
+    T* GetAt(const sgl::vec2f& pos, std::vector<std::unique_ptr<T>>& my_values) {
+        const sgl::vec2s pixel_pos = PixelToPos(pos);
+
+        for (std::unique_ptr<T>& value : my_values) {
+            const sgl::vec2s value_pixel_pos = PixelToPos(value->getPosition());
+
+            if (pixel_pos == value_pixel_pos)
+                return value.get();
+        }
+
+        return nullptr;
+    }
 }
 
 void TileMap::_generate(sgl::int8 id, const sgl::vec2s& pos) {
-    const Cat cat = identifyID(id);
+    const Cat cat = CategorizeID(id);
     switch (cat) {
         case Cat::Tile:
         {
-            Tile* tile = make_tile(id, _tileset, pos);
+            Tile* tile = MakeTile(id, _tileset, pos);
             _tiles.push_back(std::unique_ptr<Tile>(tile));
         }
         break;
         case Cat::Item:
         {
-            Item* item = make_item(id, _tileset, pos);
+            Item* item = MakeItem(id, _tileset, pos);
             _items.push_back(std::unique_ptr<Item>(item));
         }
         break;
         case Cat::Stream:
         {
-            Stream* stream = make_stream(id, _tileset, pos);
+            Stream* stream = MakeStream(id, _tileset, pos);
             _streams.push_back(std::unique_ptr<Stream>(stream));
         }
         break;
         case Cat::Entity:
         {
-            Entity* entity = make_entity(id, _tileset, pos);
+            Entity* entity = MakeEntity(id, _tileset, pos);
             _entities.push_back(std::unique_ptr<Entity>(entity));
         }
         break;
     }
 
     if (cat == Cat::Item || cat == Cat::Entity) {
-        Tile* tile = make_tile(ID::Gras, _tileset, pos);
+        Tile* tile = MakeTile(ID::Gras, _tileset, pos);
         _tiles.push_back(std::unique_ptr<Tile>(tile));
     }
 }
@@ -68,7 +99,7 @@ TileMap::TileMap(const std::string& filename) {
         pugi::xml_node image_node = map_node.child("tileset").child("image");
 
         const std::string tileset_file = image_node.attribute("source").value();
-        const std::string dirname = split(filename, '/')[0];
+        const std::string dirname = Split(filename, '/')[0];
 
         sgl::Surface tileset(dirname + '/' + tileset_file);
         _tileset.load(tileset);
@@ -79,7 +110,7 @@ TileMap::TileMap(const std::string& filename) {
         for (pugi::xml_node_iterator it = data.begin(); it != data.end(); ++it) {
             // Layer
             for (pugi::xml_attribute_iterator ait = it->attributes_begin(); ait != it->attributes_end(); ++ait) {
-                const int gid = toInt(ait->value());
+                const int gid = ToInt(ait->value());
                 _generate(gid, pos);
 
                 if (gid == ID::Quinn)
@@ -102,16 +133,10 @@ void TileMap::update() {
         tile->update();
     }
 
-    const sgl::int32 MapWidth = _width * TILE_SIZE - TILE_SIZE;
-
     for (std::unique_ptr<Entity>& entity : _entities) {
         Effect* effect = Interaction(entity.get(), this);
         if (effect)
             _effects.push_back(std::unique_ptr<Effect>(effect));
-
-        const float pos_x = entity->getPosition().x;
-        if (pos_x >= MapWidth || pos_x <= 0)
-            entity->outOfBounds();
 
         entity->update();
     }
@@ -156,17 +181,17 @@ void TileMap::draw(const sgl::Window* wnd) const {
 }
 
 Tile* TileMap::getTileAt(const sgl::vec2f& pos) {
-    return this->getAt(pos, _tiles);
+    return GetAt(pos, _tiles);
 }
 
 Item* TileMap::getItemAt(const sgl::vec2f& pos) {
-    return this->getAt(pos, _items);
+    return GetAt(pos, _items);
 }
 
 Entity* TileMap::getEntityAt(const sgl::vec2f& pos) {
-    return this->getAt(pos, _entities);
+    return GetAt(pos, _entities);
 }
 
 Stream* TileMap::getStreamAt(const sgl::vec2f& pos) {
-    return this->getAt(pos, _streams);
+    return GetAt(pos, _streams);
 }

@@ -7,23 +7,7 @@
 #include "Entities/Bug.hpp"
 #include "Stream.hpp"
 
-Cat identifyID(sgl::int8 id) {
-    if (id <= 0)
-        return Cat::None;
-
-    if (id >= ID::EdgeGroundLeft && id <= ID::Gras)
-        return Cat::Tile;
-    if (id >= ID::StreamRight && id <= ID::StreamDown)
-        return Cat::Stream;
-    if (id >= ID::Crystall_1 && id <= ID::Crystall_3)
-        return Cat::Item;
-    if (id >= ID::Quinn && id <= ID::Bug)
-        return Cat::Entity;
-
-    return Cat::None;
-}
-
-Tile* make_tile(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
+Tile* MakeTile(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     const sgl::int8 tile_id = id - 1;
     switch (id) {
         case ID::EdgeGroundLeft:
@@ -37,7 +21,7 @@ Tile* make_tile(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     return nullptr;
 }
 
-Item* make_item(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
+Item* MakeItem(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     const sgl::int8 tile_id = id - 1;
     switch (id) {
         case ID::Crystall_1:
@@ -51,7 +35,7 @@ Item* make_item(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     return nullptr;
 }
 
-Stream* make_stream(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
+Stream* MakeStream(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     const sgl::int8 tile_id = id - 1;
     switch (id) {
         case ID::StreamDown:
@@ -67,7 +51,7 @@ Stream* make_stream(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) 
     return nullptr;
 }
 
-Entity* make_entity(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
+Entity* MakeEntity(sgl::int8 id, sgl::Texture& texture, const sgl::vec2s& pos) {
     const sgl::int8 tile_id = id - 1;
     switch (id) {
         case ID::Quinn:

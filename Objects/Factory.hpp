@@ -11,19 +11,9 @@ class Stream;
 class Item;
 class Entity;
 
-enum class Cat {
-    None,
-    Tile,
-    Item,
-    Entity,
-    Stream
-};
-
-Cat identifyID(sgl::int8 id);
-
-Tile* make_tile(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
-Item* make_item(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
-Stream* make_stream(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
-Entity* make_entity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
+Tile* MakeTile(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
+Item* MakeItem(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
+Stream* MakeStream(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
+Entity* MakeEntity(sgl::int8 id, sgl::Texture&, const sgl::vec2s&);
 
 #endif // FLATLAND_FACTORY_HPP

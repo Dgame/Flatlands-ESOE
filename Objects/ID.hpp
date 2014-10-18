@@ -1,6 +1,8 @@
 #ifndef FLATLAND_ID_HPP
 #define FLATLAND_ID_HPP
 
+#include <SGL/Core/Types.hpp>
+
 namespace ID {
     enum {
         EdgeGroundLeft = 1,
@@ -22,5 +24,15 @@ namespace ID {
         Bug = 13
     };
 }
+
+enum class Cat : sgl::int8 {
+    None,
+    Tile,
+    Item,
+    Entity,
+    Stream
+};
+
+Cat CategorizeID(sgl::int8 id);
 
 #endif // FLATLAND_ID_HPP
